@@ -1,0 +1,4 @@
+ResponCSS
+A fluid responsive CSS grid framework
+
+The goal is to create a fluid grid that adapts depending on screen size, adding or subtracting columns to make efficient use of the entire screen.

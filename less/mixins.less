@@ -1,0 +1,14 @@
+// width calc mixin based on column and gutter settings
+.box-width(@total_cols, @num_cols, @col) {
+    width: ((@col * @num_cols) + ((@num_cols - 1) * 1)) * (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
+}
+
+// width calc mixin based on column and gutter settings
+.box-offset(@total_cols, @num_cols, @col) {
+    margin-left: ((@col * @num_cols) + ((@num_cols + .5) * 1)) * (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
+}
+
+.box-margins(@total_cols, @col) {
+    @base: (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
+    margin: @base / 2;
+}

@@ -7,35 +7,19 @@
  *
  */
 
+// ResponCSS Variables
+@import "variables.less";
 
-// change @column to adjust the width ratio of columns compared to gutters
-// the higher the # the wider the columns and smaller the gutters
-@column: 5;
+// ResponCSS Mixins
+@import "mixins.less";
 
-// width calc mixin based on column and gutter settings
-.box-width(@total_cols, @num_cols, @col) {
-    width: ((@col * @num_cols) + ((@num_cols - 1) * 1)) * (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
-}
 
-// width calc mixin based on column and gutter settings
-.box-offset(@total_cols, @num_cols, @col) {
-    margin-left: ((@col * @num_cols) + ((@num_cols + .5) * 1)) * (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
-}
-
-.box-margins(@total_cols, @col) {
-    @base: (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
-    margin: @base / 2;
-}
-
+// Begin grid -------------------------------
 .container-style() {
     width: 100%;
     clear: both;
 }
 
-body, html {
-padding: 0;
-margin: 0;
-}
 
 // micro clear fix 
 .cf:before, .cf:after {
@@ -109,7 +93,7 @@ margin: 0;
 
  
 // Portrait tablet
-@media (min-width: 768px) {
+@media (min-width: @m-min-width) {
     .container {
         .container-style;
     }
@@ -203,7 +187,7 @@ margin: 0;
 }
  
 // Landscape tablet or desktop
-@media (min-width: 980px) {
+@media (min-width: @l-min-width) {
     .container {
         .container-style;
     }
@@ -334,7 +318,7 @@ margin: 0;
 }
  
 // Large desktop
-@media (min-width: 1200px) {
+@media (min-width: @xl-min-width) {
     .container {
         .container-style;
     }
@@ -499,6 +483,5 @@ margin: 0;
     .xl-offset-16, .c-offset-full {
         .box-offset(16, 16, @column);
     }
-
 
 }

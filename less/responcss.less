@@ -1,5 +1,5 @@
 /*!
- * ResponCSS v0.3.0 - Responsive fluid CSS grid
+ * ResponCSS v0.4.0 - Responsive fluid CSS grid
  *
  * (c) 2012, Adam Draper - https://github.com/adamwdraper
  *
@@ -17,23 +17,20 @@
 // Begin grid --------------------------------
 
 // micro clear fix 
-.cf:before, .cf:after {
+.cf:before, .cf:after, .con:before, .con:after {
     content: "";
     display: table;
 }
-.cf:after {
+.cf:after, .con:after {
     clear: both;
 }
-.cf {
+.cf, .con {
     zoom: 1;
 }
 
 
 // Mobile Devices
 
-.container {
-    .container-style;
-}
 
 // small mixin
 .s-box () { 
@@ -51,47 +48,42 @@
     display: block;
 }
 
-.s-1, .c-qtr {
+.s-1, .s-qtr, .c-qtr {
     .box-width(4, 1, @column);
     .s-box;
 }
 
-.s-2, .c-half {
+.s-2, .s-half, .c-half {
     .box-width(4, 2, @column);
     .s-box;
 }
 
-.s-3, .c-qtr3 {
+.s-3, .s-3qtr, .c-3qtr {
     .box-width(4, 3, @column);
     .s-box;
 }
 
-.s-4, .c-full {
+.s-4, .s-full, .c-full {
     .box-width(4, 4, @column);
     .s-box;
 }
 
-.s-offset-1, .c-offset-qtr {
+.s-offset-1, .s-offset-qtr, .c-offset-qtr {
     .box-offset(4, 1, @column);
 }
 
-.s-offset-2, .c-offset-half {
+.s-offset-2, .s-offset-half, .c-offset-half {
     .box-offset(4, 2, @column);
 }
 
-.s-offset-3, .c-offset-qtr3 {
+.s-offset-3, .s-offset-3qtr, .c-offset-3qtr {
     .box-offset(4, 3, @column);
 }
-
-
 
 
  
 // Portrait tablet
 @media (min-width: @m-min-width) {
-    .container {
-        .container-style;
-    }
 
     // medium mixin
     .m-box() {
@@ -113,7 +105,7 @@
         .m-box;
     }
 
-    .m-2, .c-qtr {
+    .m-2, .m-qtr, .c-qtr {
         .box-width(8, 2, @column);
         .m-box;
     }
@@ -123,7 +115,7 @@
         .m-box;
     }
 
-    .m-4, .c-half {
+    .m-4, .m-half, .c-half {
         .box-width(8, 4, @column);
         .m-box;
     }
@@ -133,7 +125,7 @@
         .m-box;
     }
 
-    .m-6, .c-qtr3 {
+    .m-6, .m-3qtr, .c-3qtr {
         .box-width(8, 6, @column);
         .m-box;
     }
@@ -143,7 +135,7 @@
         .m-box;
     }
 
-    .m-8, .c-full {
+    .m-8, .m-full, .c-full {
         .box-width(8, 8, @column);
         .m-box;
     }
@@ -154,7 +146,7 @@
         .box-offset(8, 1, @column);
     }
 
-    .m-offset-2, .c-offset-qtr {
+    .m-offset-2, .m-offset-qtr, .c-offset-qtr {
         .box-offset(8, 2, @column);
     }
 
@@ -162,7 +154,7 @@
         .box-offset(8, 3, @column);
     }
 
-    .m-offset-4, .c-offset-half {
+    .m-offset-4, .m-offset-half, .c-offset-half {
         .box-offset(8, 4, @column);
     }
 
@@ -170,7 +162,7 @@
         .box-offset(8, 5, @column);
     }
 
-    .m-offset-6, .c-offset-qtr3 {
+    .m-offset-6, .m-offset-3qtr, .c-offset-3qtr {
         .box-offset(8, 6, @column);
     }
 
@@ -183,9 +175,6 @@
  
 // Landscape tablet or desktop
 @media (min-width: @l-min-width) {
-    .container {
-        .container-style;
-    }
 
     // large mixin
     .l-box() {
@@ -212,7 +201,7 @@
         .l-box;
     }
 
-    .l-3, .c-qtr {
+    .l-3, .l-qtr, .c-qtr {
         .box-width(12, 3, @column);
         .l-box;
     }
@@ -227,7 +216,7 @@
         .l-box;
     }
 
-    .l-6, .c-half {
+    .l-6, .l-half, .c-half {
         .box-width(12, 6, @column);
         .l-box;
     }
@@ -242,7 +231,7 @@
         .l-box;
     }
 
-    .l-9, .c-qtr3 {
+    .l-9, .l-3qtr, .c-3qtr {
         .box-width(12, 9, @column);
         .l-box;
     }
@@ -257,7 +246,7 @@
         .l-box;
     }
 
-    .l-12, .c-full {
+    .l-12, .l-full, .c-full {
         .box-width(12, 12, @column);
         margin-left: 0;
         .l-box;
@@ -273,7 +262,7 @@
         .box-offset(12, 2, @column);
     }
 
-    .l-offset-3, .c-offset-qtr {
+    .l-offset-3, .l-offset-qtr, .c-offset-qtr {
         .box-offset(12, 3, @column);
     }
 
@@ -285,7 +274,7 @@
         .box-offset(12, 5, @column);
     }
 
-    .l-offset-6, .c-offset-half {
+    .l-offset-6, .l-offset-half, .c-offset-half {
         .box-offset(12, 6, @column);
     }
 
@@ -297,7 +286,7 @@
         .box-offset(12, 8, @column);
     }
 
-    .l-offset-9, .c-offset-qtr3 {
+    .l-offset-9, .l-offset-3qtr, .c-offset-3qtr {
         .box-offset(12, 9, @column);
     }
 
@@ -314,9 +303,6 @@
  
 // Large desktop
 @media (min-width: @xl-min-width) {
-    .container {
-        .container-style;
-    }
 
     // xl mixin
     .xl-box() {
@@ -348,7 +334,7 @@
         .xl-box;
     }
 
-    .xl-4, .c-qtr {
+    .xl-4, .xl-qtr, .c-qtr {
         .box-width(16, 4, @column);
         .xl-box;
     }
@@ -368,7 +354,7 @@
         .xl-box;
     }
 
-    .xl-8, .c-half {
+    .xl-8, .xl-half, .c-half {
         .box-width(16, 8, @column);
         .xl-box;
     }
@@ -388,7 +374,7 @@
         .xl-box;
     }
 
-    .xl-12, .c-qtr3 {
+    .xl-12, .xl-3qtr, .c-3qtr {
         .box-width(16, 12, @column);
         .xl-box;
     }
@@ -408,7 +394,7 @@
         .xl-box;
     }
 
-    .xl-16, .c-full {
+    .xl-16, .xl-full, .c-full {
         .box-width(16, 16, @column);
         .xl-box;
     }
@@ -427,7 +413,7 @@
         .box-offset(16, 3, @column);
     }
 
-    .xl-offset-4, .c-offset-qtr {
+    .xl-offset-4, .xl-offset-qtr, .c-offset-qtr {
         .box-offset(16, 4, @column);
     }
 
@@ -443,7 +429,7 @@
         .box-offset(16, 7, @column);
     }
 
-    .xl-offset-8, .c-offset-half {
+    .xl-offset-8, .xl-offset-half, .c-offset-half {
         .box-offset(16, 8, @column);
     }
 
@@ -459,7 +445,7 @@
         .box-offset(16, 11, @column);
     }
 
-    .xl-offset-12, .c-offset-qtr3 {
+    .xl-offset-12, .xl-offset-3qtr, .c-offset-3qtr {
         .box-offset(16, 12, @column);
     }
 
@@ -475,7 +461,7 @@
         .box-offset(16, 15, @column);
     }
 
-    .xl-offset-16, .c-offset-full {
+    .xl-offset-16, .xl-offset-full, .c-offset-full {
         .box-offset(16, 16, @column);
     }
 

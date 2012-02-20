@@ -17,15 +17,19 @@
 // Begin grid --------------------------------
 
 // micro clear fix 
-.cf:before, .cf:after, .con:before, .con:after {
+.cf:before, .cf:after, .col:before, .col:after {
     content: "";
     display: table;
 }
-.cf:after, .con:after {
+.cf:after, .col:after {
     clear: both;
 }
-.cf, .con {
+.cf, .col {
     zoom: 1;
+}
+
+.col {
+    float: left;
 }
 
 

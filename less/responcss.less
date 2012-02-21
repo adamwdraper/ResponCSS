@@ -44,14 +44,6 @@
     display:block;
 }
 
-.s-hide {
-    display: none;
-}
-
-.s-show {
-    display: block;
-}
-
 .s-1, .s-qtr, .c-qtr {
     .box-width(4, 1, @column);
     .s-box;
@@ -84,6 +76,13 @@
     .box-offset(4, 3, @column);
 }
 
+.s-hide {
+    display: none;
+}
+
+.s-show {
+    display: block;
+}
 
  
 // Portrait tablet
@@ -94,14 +93,6 @@
         .box-margins(8, @column);
         float: left;
         display:block;
-    }
-
-    .m-hide {
-        display:none;
-    }
-
-    .m-show {
-        display: block;
     }
 
     .m-1 {
@@ -174,6 +165,13 @@
         .box-offset(8, 7, @column);
     }
 
+    .m-hide {
+        display:none;
+    }
+
+    .m-show {
+        display: block;
+    }
 
 }
  
@@ -184,14 +182,6 @@
     .l-box() {
         .box-margins(12, @column);
         float: left;
-        display: block;
-    }
-
-    .l-hide {
-        display: none;
-    }
-
-    .l-show {
         display: block;
     }
     
@@ -301,7 +291,14 @@
     .l-offset-11 {
         .box-offset(12, 11, @column);
     }
+    
+    .l-hide {
+        display: none;
+    }
 
+    .l-show {
+        display: block;
+    }
 
 }
  
@@ -312,14 +309,6 @@
     .xl-box() {
         .box-margins(16, @column);
         float: left;
-        display: block;
-    }
-
-    .xl-hide {
-        display: none;
-    }
-
-    .xl-show {
         display: block;
     }
 
@@ -467,6 +456,14 @@
 
     .xl-offset-16, .xl-offset-full, .c-offset-full {
         .box-offset(16, 16, @column);
+    }
+
+    .xl-hide {
+        display: none;
+    }
+
+    .xl-show {
+        display: block;
     }
 
 }

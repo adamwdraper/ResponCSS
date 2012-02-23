@@ -4,12 +4,15 @@
 
 // Media screen widths ----------------------------------------------------
     // Small (Up to Medium min-width) - Target Screens: Smartphones, Tablets 
+    @s-max-width: (@m-min-width - 1);
 
     // Medium - Target Screens: Tablets, Low Res Desktop Monitors
     @m-min-width: 768px;
+    @m-max-width: (@l-min-width - 1);
 
     // Large - Target Screens: Avg Desktop Monitors
     @l-min-width: 980px;
+    @l-max-width: (@xl-min-width - 1);
 
     // Xtra Large - Target Screens: Large Desktop Monitors
     @xl-min-width: 1200px;

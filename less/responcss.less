@@ -1,5 +1,5 @@
 /*!
- * ResponCSS v0.4.0 - Responsive fluid CSS grid
+ * ResponCSS v0.5.0 - Responsive fluid CSS grid
  *
  * (c) 2012, Adam Draper - https://github.com/adamwdraper
  *
@@ -14,125 +14,168 @@
 @import "mixins.less";
 
 
+// Bonus Clearfix Style --------------------------------
+.cf {
+    .clearfix();
+}
+
 // Begin grid --------------------------------
 
-// micro clear fix 
-.cf:before, .cf:after, .col:before, .col:after {
-    content: "";
-    display: table;
-}
-.cf:after, .col:after {
-    clear: both;
-}
-.cf, .col {
-    zoom: 1;
+// universal block grid
+.g-1 {
+    .box(10, 10, @column);
 }
 
-.col {
-    float: left;
+.g-2 {
+    .box(10, 5, @column);
+}
+
+.g-3 {
+    .box(10, 3.333, @column);
+}
+
+.g-4 {
+    .box(10, 2.5, @column);
+}
+
+.g-5 {
+    .box(10, 2, @column);
+}
+
+.g-6 {
+    .box(10, 1.666, @column);
+}
+
+.g-7 {
+    .box(10, 1.428, @column);
+}
+
+.g-8 {
+    .box(10, 1.25, @column);
+}
+
+.g-9 {
+    .box(10, 1.111, @column);
+}
+
+.g-10 {
+    .box(10, 1, @column);
 }
 
 
 // Mobile Devices
+@media (max-width: @s-max-width) {
 
+    .s-1, .s-qtr, .qtr {
+        .box(4, 1, @column);
+    }
 
-// small mixin
-.s-box () { 
-    .box-margins(4, @column);
-    float: left;
-    min-height: 1px;
-    display:block;
-}
+    .s-2, .s-half, .half {
+        .box(4, 2, @column);
+    }
 
-.s-1, .s-qtr, .c-qtr {
-    .box-width(4, 1, @column);
-    .s-box;
-}
+    .s-3, .s-qtr3, .qtr3 {
+        .box(4, 3, @column);
+    }
 
-.s-2, .s-half, .c-half {
-    .box-width(4, 2, @column);
-    .s-box;
-}
+    .s-4, .s-full, .full {
+        .box(4, 4, @column);
+    }
 
-.s-3, .s-3qtr, .c-3qtr {
-    .box-width(4, 3, @column);
-    .s-box;
-}
+    // offsets
+    .s-offset-1, .s-offset-qtr, .offset-qtr {
+        .box-offset(4, 1, @column);
+    }
 
-.s-4, .s-full, .c-full {
-    .box-width(4, 4, @column);
-    .s-box;
-}
+    .s-offset-2, .s-offset-half, .offset-half {
+        .box-offset(4, 2, @column);
+    }
 
-.s-offset-1, .s-offset-qtr, .c-offset-qtr {
-    .box-offset(4, 1, @column);
-}
+    .s-offset-3, .s-offset-qtr3, .offset-qtr3 {
+        .box-offset(4, 3, @column);
+    }
 
-.s-offset-2, .s-offset-half, .c-offset-half {
-    .box-offset(4, 2, @column);
-}
+    // block grid
+    .s-g-1 {
+        .box(10, 10, @column);
+    }
 
-.s-offset-3, .s-offset-3qtr, .c-offset-3qtr {
-    .box-offset(4, 3, @column);
-}
+    .s-g-2 {
+        .box(10, 5, @column);
+    }
 
-.s-hide {
-    display: none;
-}
+    .s-g-3 {
+        .box(10, 3.333, @column);
+    }
 
-.s-show {
-    display: block;
+    .s-g-4 {
+        .box(10, 2.5, @column);
+    }
+
+    .s-g-5 {
+        .box(10, 2, @column);
+    }
+
+    .s-g-6 {
+        .box(10, 1.666, @column);
+    }
+
+    .s-g-7 {
+        .box(10, 1.428, @column);
+    }
+
+    .s-g-8 {
+        .box(10, 1.25, @column);
+    }
+
+    .s-g-9 {
+        .box(10, 1.111, @column);
+    }
+
+    .s-g-10 {
+        .box(10, 1, @column);
+    }
+
+    // display override
+    .s-hide {
+        display: none;
+    }
 }
 
  
 // Portrait tablet
-@media (min-width: @m-min-width) {
-
-    // medium mixin
-    .m-box() {
-        .box-margins(8, @column);
-        float: left;
-        display:block;
-    }
+@media (min-width: @m-min-width) and (max-width: @m-max-width) {
 
     .m-1 {
-        .box-width(8, 1, @column);
-        .m-box;
+        .box(8, 1, @column);
     }
 
-    .m-2, .m-qtr, .c-qtr {
-        .box-width(8, 2, @column);
-        .m-box;
+    .m-2, .m-qtr, .qtr {
+        .box(8, 2, @column);
     }
 
     .m-3 {
-        .box-width(8, 3, @column);
-        .m-box;
+        .box(8, 3, @column);
     }
 
-    .m-4, .m-half, .c-half {
-        .box-width(8, 4, @column);
-        .m-box;
+    .m-4, .m-half, .half {
+        .box(8, 4, @column);
     }
 
     .m-5 {
-        .box-width(8, 5, @column);
-        .m-box;
+        .box(8, 5, @column);
     }
 
-    .m-6, .m-3qtr, .c-3qtr {
-        .box-width(8, 6, @column);
-        .m-box;
+    .m-6, .m-qtr3, .qtr3 {
+        .box(8, 6, @column);
     }
 
     .m-7 {
-        .box-width(8, 7, @column);
-        .m-box;
+        .box(8, 7, @column);
     }
 
-    .m-8, .m-full, .c-full {
-        .box-width(8, 8, @column);
-        .m-box;
+    .m-8, .m-full, .full {
+        .box(8, 8, @column);
     }
 
 
@@ -141,7 +184,7 @@
         .box-offset(8, 1, @column);
     }
 
-    .m-offset-2, .m-offset-qtr, .c-offset-qtr {
+    .m-offset-2, .m-offset-qtr, .offset-qtr {
         .box-offset(8, 2, @column);
     }
 
@@ -149,7 +192,7 @@
         .box-offset(8, 3, @column);
     }
 
-    .m-offset-4, .m-offset-half, .c-offset-half {
+    .m-offset-4, .m-offset-half, .offset-half {
         .box-offset(8, 4, @column);
     }
 
@@ -157,7 +200,7 @@
         .box-offset(8, 5, @column);
     }
 
-    .m-offset-6, .m-offset-3qtr, .c-offset-3qtr {
+    .m-offset-6, .m-offset-qtr3, .offset-qtr3 {
         .box-offset(8, 6, @column);
     }
 
@@ -165,85 +208,102 @@
         .box-offset(8, 7, @column);
     }
 
+    // block grid
+    .m-g-1 {
+        .box(10, 10, @column);
+    }
+
+    .m-g-2 {
+        .box(10, 5, @column);
+    }
+
+    .m-g-3 {
+        .box(10, 3.333, @column);
+    }
+
+    .m-g-4 {
+        .box(10, 2.5, @column);
+    }
+
+    .m-g-5 {
+        .box(10, 2, @column);
+    }
+
+    .m-g-6 {
+        .box(10, 1.666, @column);
+    }
+
+    .m-g-7 {
+        .box(10, 1.428, @column);
+    }
+
+    .m-g-8 {
+        .box(10, 1.25, @column);
+    }
+
+    .m-g-9 {
+        .box(10, 1.111, @column);
+    }
+
+    .m-g-10 {
+        .box(10, 1, @column);
+    }
+
+    // display override
     .m-hide {
         display:none;
     }
-
-    .m-show {
-        display: block;
-    }
-
 }
  
 // Landscape tablet or desktop
-@media (min-width: @l-min-width) {
+@media (min-width: @l-min-width) and (max-width: @l-max-width) {
 
-    // large mixin
-    .l-box() {
-        .box-margins(12, @column);
-        float: left;
-        display: block;
-    }
-    
     .l-1 {
-        .box-width(12, 1, @column);
-        .l-box;
+        .box(12, 1, @column);
     }
 
     .l-2 {
-        .box-width(12, 2, @column);
-        .l-box;
+        .box(12, 2, @column);
     }
 
-    .l-3, .l-qtr, .c-qtr {
-        .box-width(12, 3, @column);
-        .l-box;
+    .l-3, .l-qtr, .qtr {
+        .box(12, 3, @column);
     }
 
     .l-4 {
-        .box-width(12, 4, @column);
-        .l-box;
+        .box(12, 4, @column);
     }
 
     .l-5 {
-        .box-width(12, 5, @column);
-        .l-box;
+        .box(12, 5, @column);
     }
 
-    .l-6, .l-half, .c-half {
-        .box-width(12, 6, @column);
-        .l-box;
+    .l-6, .l-half, .half {
+        .box(12, 6, @column);
     }
 
     .l-7 {
-        .box-width(12, 7, @column);
-        .l-box;
+        .box(12, 7, @column);
     }
     
     .l-8 {
-        .box-width(12, 8, @column);
-        .l-box;
+        .box(12, 8, @column);
     }
 
-    .l-9, .l-3qtr, .c-3qtr {
-        .box-width(12, 9, @column);
-        .l-box;
+    .l-9, .l-qtr3, .qtr3 {
+        .box(12, 9, @column);
     }
 
     .l-10 {
-        .box-width(12, 10, @column);
-        .l-box;
+        .box(12, 10, @column);
     }
 
     .l-11 {
-        .box-width(12, 11, @column);
-        .l-box;
+        .box(12, 11, @column);
     }
 
-    .l-12, .l-full, .c-full {
-        .box-width(12, 12, @column);
-        margin-left: 0;
-        .l-box;
+    .l-12, .l-full, .full {
+        .box(12, 12, @column);
     }
 
 
@@ -256,7 +316,7 @@
         .box-offset(12, 2, @column);
     }
 
-    .l-offset-3, .l-offset-qtr, .c-offset-qtr {
+    .l-offset-3, .l-offset-qtr, .offset-qtr {
         .box-offset(12, 3, @column);
     }
 
@@ -268,7 +328,7 @@
         .box-offset(12, 5, @column);
     }
 
-    .l-offset-6, .l-offset-half, .c-offset-half {
+    .l-offset-6, .l-offset-half, .offset-half {
         .box-offset(12, 6, @column);
     }
 
@@ -280,7 +340,7 @@
         .box-offset(12, 8, @column);
     }
 
-    .l-offset-9, .l-offset-3qtr, .c-offset-3qtr {
+    .l-offset-9, .l-offset-qtr3, .offset-qtr3 {
         .box-offset(12, 9, @column);
     }
 
@@ -291,107 +351,120 @@
     .l-offset-11 {
         .box-offset(12, 11, @column);
     }
-    
+
+    // block grid
+    .l-g-1 {
+        .box(10, 10, @column);
+    }
+
+    .l-g-2 {
+        .box(10, 5, @column);
+    }
+
+    .l-g-3 {
+        .box(10, 3.333, @column);
+    }
+
+    .l-g-4 {
+        .box(10, 2.5, @column);
+    }
+
+    .l-g-5 {
+        .box(10, 2, @column);
+    }
+
+    .l-g-6 {
+        .box(10, 1.666, @column);
+    }
+
+    .l-g-7 {
+        .box(10, 1.428, @column);
+    }
+
+    .l-g-8 {
+        .box(10, 1.25, @column);
+    }
+
+    .l-g-9 {
+        .box(10, 1.111, @column);
+    }
+
+    .l-g-10 {
+        .box(10, 1, @column);
+    }
+
+    // display override
     .l-hide {
         display: none;
     }
-
-    .l-show {
-        display: block;
-    }
-
 }
  
 // Large desktop
 @media (min-width: @xl-min-width) {
 
-    // xl mixin
-    .xl-box() {
-        .box-margins(16, @column);
-        float: left;
-        display: block;
-    }
-
     .xl-1 {
-        .box-width(16, 1, @column);
-        .xl-box;
+        .box(16, 1, @column);
     }
 
     .xl-2 {
-        .box-width(16, 2, @column);
-        .xl-box;
+        .box(16, 2, @column);
     }
 
     .xl-3 {
-        .box-width(16, 3, @column);
-        .xl-box;
+        .box(16, 3, @column);
     }
 
-    .xl-4, .xl-qtr, .c-qtr {
-        .box-width(16, 4, @column);
-        .xl-box;
+    .xl-4, .xl-qtr, .qtr {
+        .box(16, 4, @column);
     }
 
     .xl-5 {
-        .box-width(16, 5, @column);
-        .xl-box;
+        .box(16, 5, @column);
     }
 
     .xl-6 {
-        .box-width(16, 6, @column);
-        .xl-box;
+        .box(16, 6, @column);
     }
 
     .xl-7 {
-        .box-width(16, 7, @column);
-        .xl-box;
+        .box(16, 7, @column);
     }
 
-    .xl-8, .xl-half, .c-half {
-        .box-width(16, 8, @column);
-        .xl-box;
+    .xl-8, .xl-half, .half {
+        .box(16, 8, @column);
     }
 
     .xl-9 {
-        .box-width(16, 9, @column);
-        .xl-box;
+        .box(16, 9, @column);
     }
 
     .xl-10 {
-        .box-width(16, 10, @column);
-        .xl-box;
+        .box(16, 10, @column);
     }
 
     .xl-11 {
-        .box-width(16, 11, @column);
-        .xl-box;
+        .box(16, 11, @column);
     }
 
-    .xl-12, .xl-3qtr, .c-3qtr {
-        .box-width(16, 12, @column);
-        .xl-box;
+    .xl-12, .xl-qtr3, .qtr3 {
+        .box(16, 12, @column);
     }
 
     .xl-13 {
-        .box-width(16, 13, @column);
-        .xl-box;
+        .box(16, 13, @column);
     }
 
     .xl-14 {
-        .box-width(16, 14, @column);
-        .xl-box;
+        .box(16, 14, @column);
     }
 
     .xl-15 {
-        .box-width(16, 15, @column);
-        .xl-box;
+        .box(16, 15, @column);
     }
 
-    .xl-16, .xl-full, .c-full {
-        .box-width(16, 16, @column);
-        .xl-box;
+    .xl-16, .xl-full, .full {
+        .box(16, 16, @column);
     }
-
 
     // offsets
     .xl-offset-1 {
@@ -406,7 +479,7 @@
         .box-offset(16, 3, @column);
     }
 
-    .xl-offset-4, .xl-offset-qtr, .c-offset-qtr {
+    .xl-offset-4, .xl-offset-qtr, .offset-qtr {
         .box-offset(16, 4, @column);
     }
 
@@ -422,7 +495,7 @@
         .box-offset(16, 7, @column);
     }
 
-    .xl-offset-8, .xl-offset-half, .c-offset-half {
+    .xl-offset-8, .xl-offset-half, .offset-half {
         .box-offset(16, 8, @column);
     }
 
@@ -438,7 +511,7 @@
         .box-offset(16, 11, @column);
     }
 
-    .xl-offset-12, .xl-offset-3qtr, .c-offset-3qtr {
+    .xl-offset-12, .xl-offset-qtr3, .offset-qtr3 {
         .box-offset(16, 12, @column);
     }
 
@@ -454,16 +527,53 @@
         .box-offset(16, 15, @column);
     }
 
-    .xl-offset-16, .xl-offset-full, .c-offset-full {
+    .xl-offset-16, .xl-offset-full, .offset-full {
         .box-offset(16, 16, @column);
     }
 
+    // block grid
+    .xl-g-1 {
+        .box(10, 10, @column);
+    }
+
+    .xl-g-2 {
+        .box(10, 5, @column);
+    }
+
+    .xl-g-3 {
+        .box(10, 3.333, @column);
+    }
+
+    .xl-g-4 {
+        .box(10, 2.5, @column);
+    }
+
+    .xl-g-5 {
+        .box(10, 2, @column);
+    }
+
+    .xl-g-6 {
+        .box(10, 1.666, @column);
+    }
+
+    .xl-g-7 {
+        .box(10, 1.428, @column);
+    }
+
+    .xl-g-8 {
+        .box(10, 1.25, @column);
+    }
+
+    .xl-g-9 {
+        .box(10, 1.111, @column);
+    }
+
+    .xl-g-10 {
+        .box(10, 1, @column);
+    }
+
+    // display override
     .xl-hide {
         display: none;
     }
-
-    .xl-show {
-        display: block;
-    }
-
 }

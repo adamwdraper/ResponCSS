@@ -1,5 +1,5 @@
 /*!
- * ResponCSS v0.5.0 - Responsive fluid CSS grid
+ * ResponCSS v0.6.0 - Responsive fluid CSS layout framework
  *
  * (c) 2012, Adam Draper - https://github.com/adamwdraper
  *
@@ -23,43 +23,43 @@
 
 // universal block grid
 .g-1 {
-    .box(10, 10, @column);
+    .box(10, 10, @block);
 }
 
 .g-2 {
-    .box(10, 5, @column);
+    .box(10, 5, @block);
 }
 
 .g-3 {
-    .box(10, 3.333, @column);
+    .box(10, 3.333, @block);
 }
 
 .g-4 {
-    .box(10, 2.5, @column);
+    .box(10, 2.5, @block);
 }
 
 .g-5 {
-    .box(10, 2, @column);
+    .box(10, 2, @block);
 }
 
 .g-6 {
-    .box(10, 1.666, @column);
+    .box(10, 1.666, @block);
 }
 
 .g-7 {
-    .box(10, 1.428, @column);
+    .box(10, 1.428, @block);
 }
 
 .g-8 {
-    .box(10, 1.25, @column);
+    .box(10, 1.25, @block);
 }
 
 .g-9 {
-    .box(10, 1.111, @column);
+    .box(10, 1.111, @block);
 }
 
 .g-10 {
-    .box(10, 1, @column);
+    .box(10, 1, @block);
 }
 
 
@@ -68,18 +68,34 @@
 
     .s-1, .s-qtr, .qtr {
         .box(4, 1, @column);
+
+        &.center {
+            .margin-fix(4, @column);
+        }
     }
 
     .s-2, .s-half, .half {
         .box(4, 2, @column);
+
+        &.center {
+            .margin-fix(4, @column);
+        }
     }
 
     .s-3, .s-qtr3, .qtr3 {
         .box(4, 3, @column);
+
+        &.center {
+            .margin-fix(4, @column);
+        }
     }
 
     .s-4, .s-full, .full {
         .box(4, 4, @column);
+
+        &.center {
+            .margin-fix(4, @column);
+        }
     }
 
     // offsets
@@ -97,43 +113,43 @@
 
     // block grid
     .s-g-1 {
-        .box(10, 10, @column);
+        .box(10, 10, @block);
     }
 
     .s-g-2 {
-        .box(10, 5, @column);
+        .box(10, 5, @block);
     }
 
     .s-g-3 {
-        .box(10, 3.333, @column);
+        .box(10, 3.333, @block);
     }
 
     .s-g-4 {
-        .box(10, 2.5, @column);
+        .box(10, 2.5, @block);
     }
 
     .s-g-5 {
-        .box(10, 2, @column);
+        .box(10, 2, @block);
     }
 
     .s-g-6 {
-        .box(10, 1.666, @column);
+        .box(10, 1.666, @block);
     }
 
     .s-g-7 {
-        .box(10, 1.428, @column);
+        .box(10, 1.428, @block);
     }
 
     .s-g-8 {
-        .box(10, 1.25, @column);
+        .box(10, 1.25, @block);
     }
 
     .s-g-9 {
-        .box(10, 1.111, @column);
+        .box(10, 1.111, @block);
     }
 
     .s-g-10 {
-        .box(10, 1, @column);
+        .box(10, 1, @block);
     }
 
     // display override
@@ -148,34 +164,66 @@
 
     .m-1 {
         .box(8, 1, @column);
+
+        &.center {
+            .margin-fix(8, @column);
+        }
     }
 
     .m-2, .m-qtr, .qtr {
         .box(8, 2, @column);
+
+        &.center {
+            .margin-fix(8, @column);
+        }
     }
 
     .m-3 {
         .box(8, 3, @column);
+
+        &.center {
+            .margin-fix(8, @column);
+        }
     }
 
     .m-4, .m-half, .half {
         .box(8, 4, @column);
+
+        &.center {
+            .margin-fix(8, @column);
+        }
     }
 
     .m-5 {
         .box(8, 5, @column);
+
+        &.center {
+            .margin-fix(8, @column);
+        }
     }
 
     .m-6, .m-qtr3, .qtr3 {
         .box(8, 6, @column);
+
+        &.center {
+            .margin-fix(8, @column);
+        }
     }
 
     .m-7 {
         .box(8, 7, @column);
+
+        &.center {
+            .margin-fix(8, @column);
+        }
     }
 
     .m-8, .m-full, .full {
         .box(8, 8, @column);
+
+        &.center {
+            .margin-fix(8, @column);
+        }
     }
 
 
@@ -210,43 +258,43 @@
 
     // block grid
     .m-g-1 {
-        .box(10, 10, @column);
+        .box(10, 10, @block);
     }
 
     .m-g-2 {
-        .box(10, 5, @column);
+        .box(10, 5, @block);
     }
 
     .m-g-3 {
-        .box(10, 3.333, @column);
+        .box(10, 3.333, @block);
     }
 
     .m-g-4 {
-        .box(10, 2.5, @column);
+        .box(10, 2.5, @block);
     }
 
     .m-g-5 {
-        .box(10, 2, @column);
+        .box(10, 2, @block);
     }
 
     .m-g-6 {
-        .box(10, 1.666, @column);
+        .box(10, 1.666, @block);
     }
 
     .m-g-7 {
-        .box(10, 1.428, @column);
+        .box(10, 1.428, @block);
     }
 
     .m-g-8 {
-        .box(10, 1.25, @column);
+        .box(10, 1.25, @block);
     }
 
     .m-g-9 {
-        .box(10, 1.111, @column);
+        .box(10, 1.111, @block);
     }
 
     .m-g-10 {
-        .box(10, 1, @column);
+        .box(10, 1, @block);
     }
 
     // display override
@@ -260,50 +308,98 @@
 
     .l-1 {
         .box(12, 1, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
     .l-2 {
         .box(12, 2, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
     .l-3, .l-qtr, .qtr {
         .box(12, 3, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
     .l-4 {
         .box(12, 4, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
     .l-5 {
         .box(12, 5, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
     .l-6, .l-half, .half {
         .box(12, 6, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
     .l-7 {
         .box(12, 7, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
     
     .l-8 {
         .box(12, 8, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
     .l-9, .l-qtr3, .qtr3 {
         .box(12, 9, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
     .l-10 {
         .box(12, 10, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
     .l-11 {
         .box(12, 11, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
     .l-12, .l-full, .full {
         .box(12, 12, @column);
+
+        &.center {
+            .margin-fix(12, @column);
+        }
     }
 
 
@@ -354,43 +450,43 @@
 
     // block grid
     .l-g-1 {
-        .box(10, 10, @column);
+        .box(10, 10, @block);
     }
 
     .l-g-2 {
-        .box(10, 5, @column);
+        .box(10, 5, @block);
     }
 
     .l-g-3 {
-        .box(10, 3.333, @column);
+        .box(10, 3.333, @block);
     }
 
     .l-g-4 {
-        .box(10, 2.5, @column);
+        .box(10, 2.5, @block);
     }
 
     .l-g-5 {
-        .box(10, 2, @column);
+        .box(10, 2, @block);
     }
 
     .l-g-6 {
-        .box(10, 1.666, @column);
+        .box(10, 1.666, @block);
     }
 
     .l-g-7 {
-        .box(10, 1.428, @column);
+        .box(10, 1.428, @block);
     }
 
     .l-g-8 {
-        .box(10, 1.25, @column);
+        .box(10, 1.25, @block);
     }
 
     .l-g-9 {
-        .box(10, 1.111, @column);
+        .box(10, 1.111, @block);
     }
 
     .l-g-10 {
-        .box(10, 1, @column);
+        .box(10, 1, @block);
     }
 
     // display override
@@ -404,66 +500,130 @@
 
     .xl-1 {
         .box(16, 1, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-2 {
         .box(16, 2, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-3 {
         .box(16, 3, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-4, .xl-qtr, .qtr {
         .box(16, 4, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-5 {
         .box(16, 5, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-6 {
         .box(16, 6, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-7 {
         .box(16, 7, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-8, .xl-half, .half {
         .box(16, 8, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-9 {
         .box(16, 9, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-10 {
         .box(16, 10, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-11 {
         .box(16, 11, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-12, .xl-qtr3, .qtr3 {
         .box(16, 12, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-13 {
         .box(16, 13, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-14 {
         .box(16, 14, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-15 {
         .box(16, 15, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     .xl-16, .xl-full, .full {
         .box(16, 16, @column);
+
+        &.center {
+            .margin-fix(16, @column);
+        }
     }
 
     // offsets
@@ -533,47 +693,55 @@
 
     // block grid
     .xl-g-1 {
-        .box(10, 10, @column);
+        .box(10, 10, @block);
     }
 
     .xl-g-2 {
-        .box(10, 5, @column);
+        .box(10, 5, @block);
     }
 
     .xl-g-3 {
-        .box(10, 3.333, @column);
+        .box(10, 3.333, @block);
     }
 
     .xl-g-4 {
-        .box(10, 2.5, @column);
+        .box(10, 2.5, @block);
     }
 
     .xl-g-5 {
-        .box(10, 2, @column);
+        .box(10, 2, @block);
     }
 
     .xl-g-6 {
-        .box(10, 1.666, @column);
+        .box(10, 1.666, @block);
     }
 
     .xl-g-7 {
-        .box(10, 1.428, @column);
+        .box(10, 1.428, @block);
     }
 
     .xl-g-8 {
-        .box(10, 1.25, @column);
+        .box(10, 1.25, @block);
     }
 
     .xl-g-9 {
-        .box(10, 1.111, @column);
+        .box(10, 1.111, @block);
     }
 
     .xl-g-10 {
-        .box(10, 1, @column);
+        .box(10, 1, @block);
     }
 
     // display override
     .xl-hide {
         display: none;
     }
+}
+
+// universal center
+.center {
+    clear: both;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
 }

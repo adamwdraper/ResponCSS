@@ -30,8 +30,9 @@
 }
 
 // Margin Fix for Centered boxes
-.margin-fix(@total_cols, @col) {
-    @base: (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
-    margin-top: @base;
-    margin-bottom: @base;
+.center-margins(@total_cols, @num_cols, @col) {
+    @margin_cols: (@total_cols - @num_cols) / 2;
+    @margin: ((@col * @margin_cols) + ((@margin_cols + .5) * 1)) * (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
+    margin-right: @margin;
+    margin-left: @margin;
 }

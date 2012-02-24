@@ -14,25 +14,58 @@
     }
 }
 
-// Box base style
-.box(@total_cols, @num_cols, @col) {
-    @base: (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
-    width: ((@col * @num_cols) + ((@num_cols - 1) * 1)) * @base;    
-    margin: @base / 2;
+// Box base style --------------------------------------------
+.box(@total_cols, @num_cols) {
+    float: left;
+    display:block;
+    .clearfix();
+    @base: (1 / ((@total_cols * @c-ratio) + (@total_cols * 1))) * 100%;
+    width: ((@c-ratio * @num_cols) + ((@num_cols - 1) * 1)) * @base;
+}
+
+// if @c-top-bottom-margins is default or invalid
+.box(@total_cols, @num_cols) when not (ispixel(@c-top-bottom-margins)) and not (ispercentage(@c-top-bottom-margins)) and not (isem(@c-top-bottom-margins)) and not (@c-top-bottom-margins = 0) {
+    @base: (1 / ((@total_cols * @c-ratio) + (@total_cols * 1))) * 100%;   
+    margin: @base / 2;    
+}
+
+// if @c-top-bottom-margins is em, px, %, or 0
+.box(@total_cols, @num_cols) when (ispixel(@c-top-bottom-margins)), (ispercentage(@c-top-bottom-margins)), (isem(@c-top-bottom-margins)), (@c-top-bottom-margins = 0) {
+    @base: (1 / ((@total_cols * @c-ratio) + (@total_cols * 1))) * 100%;   
+    margin: @c-top-bottom-margins (@base / 2);    
+}
+
+
+// Margin for offsets ----------------------------------------------
+.box-offset(@total_cols, @num_cols) {
+    margin-left: ((@c-ratio * @num_cols) + ((@num_cols + .5) * 1)) * (1 / ((@total_cols * @c-ratio) + (@total_cols * 1))) * 100%;
+}
+
+// Margins for Centered boxes --------------------------------------------------
+.center-margins(@total_cols, @num_cols) {
+    @margin_cols: (@total_cols - @num_cols) / 2;
+    @margin: ((@c-ratio * @margin_cols) + ((@margin_cols + .5) * 1)) * (1 / ((@total_cols * @c-ratio) + (@total_cols * 1))) * 100%;
+    margin-right: @margin;
+    margin-left: @margin;
+}
+
+// Box base style -----------------------------------------------------
+.g-box(@total_cols, @num_cols) {
     float: left;
     display:block;
     .clearfix();
 }
 
-// margin for offsets
-.box-offset(@total_cols, @num_cols, @col) {
-    margin-left: ((@col * @num_cols) + ((@num_cols + .5) * 1)) * (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
+// if @g-top-bottom-margins is default or invalid
+.g-box(@total_cols, @num_cols) when not (ispixel(@g-top-bottom-margins)) and not (ispercentage(@g-top-bottom-margins)) and not (isem(@g-top-bottom-margins)) and not (@g-top-bottom-margins = 0) {
+    @base: (1 / ((@total_cols * @g-ratio) + (@total_cols * 1))) * 100%;
+    width: ((@g-ratio * @num_cols) + ((@num_cols - 1) * 1)) * @base;    
+    margin: @base / 2;    
 }
 
-// Margin Fix for Centered boxes
-.center-margins(@total_cols, @num_cols, @col) {
-    @margin_cols: (@total_cols - @num_cols) / 2;
-    @margin: ((@col * @margin_cols) + ((@margin_cols + .5) * 1)) * (1 / ((@total_cols * @col) + (@total_cols * 1))) * 100%;
-    margin-right: @margin;
-    margin-left: @margin;
+// if @g-top-bottom-margins is em, px, %, or 0
+.g-box(@total_cols, @num_cols) when (ispixel(@g-top-bottom-margins)), (ispercentage(@g-top-bottom-margins)), (isem(@g-top-bottom-margins)), (@g-top-bottom-margins = 0) {
+    @base: (1 / ((@total_cols * @g-ratio) + (@total_cols * 1))) * 100%;
+    width: ((@g-ratio * @num_cols) + ((@num_cols - 1) * 1)) * @base;    
+    margin: @g-top-bottom-margins (@base / 2);  
 }

@@ -1,22 +1,46 @@
+// Container settings ---------------------------------------------------
+
 // Change @column to adjust the width ratio of columns to gutters.
 // The higher the value, the wider the columns and smaller the gutters
-    @column: 5;
 
-// Change @block to adjust the width ratio of block grids to gutters.
+@c-ratio: 5;
+
+// Apply top and bottom margins to containers.  Options: default or value (em, pixel, or percentage)
+
+@c-top-bottom-margins: default;
+
+
+// Block grid settings ---------------------------------------------------
+
+// Change @grid to adjust the width ratio of block grids to gutters.
 // The higher the value, the wider the blocks and smaller the gutters
-    @block: 6;
+
+@g-ratio: 6;
+
+// Apply top and bottom margins to block grids.  Options: default or value (em, pixel, or percentage)
+
+@g-top-bottom-margins: default;
+
+
 
 // Media screen widths ----------------------------------------------------
-    // Small (Up to Medium min-width) - Target Screens: Smartphones, Tablets 
-    @s-max-width: (@m-min-width - 1);
 
-    // Medium - Target Screens: Tablets, Low Res Desktop Monitors
-    @m-min-width: 768px;
-    @m-max-width: (@l-min-width - 1);
+// Small (Up to Medium min-width) - Target Screens: Smartphones, Tablets 
 
-    // Large - Target Screens: Avg Desktop Monitors
-    @l-min-width: 980px;
-    @l-max-width: (@xl-min-width - 1);
+@s-max-width: (@m-min-width - 1);
 
-    // Xtra Large - Target Screens: Large Desktop Monitors
-    @xl-min-width: 1200px;
+
+// Medium - Target Screens: Tablets, Low Res Desktop Monitors
+
+@m-min-width: 769px;
+@m-max-width: (@l-min-width - 1);
+
+
+// Large - Target Screens: Avg Desktop Monitors
+
+@l-min-width: 980px;
+@l-max-width: (@xl-min-width - 1);
+
+
+// Xtra Large - Target Screens: Large Desktop Monitors
+@xl-min-width: 1210px;

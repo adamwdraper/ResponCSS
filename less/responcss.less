@@ -1,5 +1,5 @@
 /*!
- * ResponCSS v0.7.0 - Responsive fluid CSS layout framework
+ * ResponCSS v0.8.0 - Responsive fluid CSS layout framework
  *
  * (c) 2012, Adam Draper - https://github.com/adamwdraper
  *
@@ -23,43 +23,43 @@
 
 // universal block grid
 .g-1 {
-    .box(10, (10/1), @block);
+    .g-box(10, (10/1));
 }
 
 .g-2 {
-    .box(10, (10/2), @block);
+    .g-box(10, (10/2));
 }
 
 .g-3 {
-    .box(10, (10/3), @block);
+    .g-box(10, (10/3));
 }
 
 .g-4 {
-    .box(10, (10/4), @block);
+    .g-box(10, (10/4));
 }
 
 .g-5 {
-    .box(10, (10/5), @block);
+    .g-box(10, (10/5));
 }
 
 .g-6 {
-    .box(10, (10/6), @block);
+    .g-box(10, (10/6));
 }
 
 .g-7 {
-    .box(10, (10/7), @block);
+    .g-box(10, (10/7));
 }
 
 .g-8 {
-    .box(10, (10/8), @block);
+    .g-box(10, (10/8));
 }
 
 .g-9 {
-    .box(10, (10/9), @block);
+    .g-box(10, (10/9));
 }
 
 .g-10 {
-    .box(10, (10/10), @block);
+    .g-box(10, (10/10));
 }
 
 
@@ -67,89 +67,89 @@
 @media (max-width: @s-max-width) {
 
     .s-1, .s-qtr, .qtr {
-        .box(4, 1, @column);
+        .box(4, 1);
 
         &.center {
-            .center-margins(4, 1, @column);
+            .center-margins(4, 1);
         }
     }
 
     .s-2, .s-half, .half {
-        .box(4, 2, @column);
+        .box(4, 2);
 
         &.center {
-            .center-margins(4, 2, @column);
+            .center-margins(4, 2);
         }
     }
 
     .s-3, .s-qtr3, .qtr3 {
-        .box(4, 3, @column);
+        .box(4, 3);
 
         &.center {
-            .center-margins(4, 3, @column);
+            .center-margins(4, 3);
         }
     }
 
     .s-4, .s-full, .full {
-        .box(4, 4, @column);
+        .box(4, 4);
 
         &.center {
-            .center-margins(4, 4, @column);
+            .center-margins(4, 4);
         }
     }
 
     // offsets
     .s-offset-1, .s-offset-qtr, .offset-qtr {
-        .box-offset(4, 1, @column);
+        .box-offset(4, 1);
     }
 
     .s-offset-2, .s-offset-half, .offset-half {
-        .box-offset(4, 2, @column);
+        .box-offset(4, 2);
     }
 
     .s-offset-3, .s-offset-qtr3, .offset-qtr3 {
-        .box-offset(4, 3, @column);
+        .box-offset(4, 3);
     }
 
     // block grid
     .s-g-1 {
-        .box(10, (10/1), @block);
+        .g-box(10, (10/1));
     }
 
     .s-g-2 {
-        .box(10, (10/2), @block);
+        .g-box(10, (10/2));
     }
 
     .s-g-3 {
-        .box(10, (10/3), @block);
+        .g-box(10, (10/3));
     }
 
     .s-g-4 {
-        .box(10, (10/4), @block);
+        .g-box(10, (10/4));
     }
 
     .s-g-5 {
-        .box(10, (10/5), @block);
+        .g-box(10, (10/5));
     }
 
     .s-g-6 {
-        .box(10, (10/6), @block);
+        .g-box(10, (10/6));
     }
 
     .s-g-7 {
-        .box(10, (10/7), @block);
+        .g-box(10, (10/7));
     }
 
     .s-g-8 {
-        .box(10, (10/8), @block);
+        .g-box(10, (10/8));
     }
 
     .s-g-9 {
-        .box(10, (10/9), @block);
+        .g-box(10, (10/9));
     }
 
     .s-g-10 {
-        .box(10, (10/10), @block);
+        .g-box(10, (10/10));
     }
 
     // display override
@@ -163,138 +163,138 @@
 @media (min-width: @m-min-width) and (max-width: @m-max-width) {
 
     .m-1 {
-        .box(8, 1, @column);
+        .box(8, 1);
 
         &.center {
-            .center-margins(8, 1, @column);
+            .center-margins(8, 1);
         }
     }
 
     .m-2, .m-qtr, .qtr {
-        .box(8, 2, @column);
+        .box(8, 2);
 
         &.center {
-            .center-margins(8, 2, @column);
+            .center-margins(8, 2);
         }
     }
 
     .m-3 {
-        .box(8, 3, @column);
+        .box(8, 3);
 
         &.center {
-            .center-margins(8, 3, @column);
+            .center-margins(8, 3);
         }
     }
 
     .m-4, .m-half, .half {
-        .box(8, 4, @column);
+        .box(8, 4);
 
         &.center {
-            .center-margins(8, 4, @column);
+            .center-margins(8, 4);
         }
     }
 
     .m-5 {
-        .box(8, 5, @column);
+        .box(8, 5);
 
         &.center {
-            .center-margins(8, 5, @column);
+            .center-margins(8, 5);
         }
     }
 
     .m-6, .m-qtr3, .qtr3 {
-        .box(8, 6, @column);
+        .box(8, 6);
 
         &.center {
-            .center-margins(8, 6, @column);
+            .center-margins(8, 6);
         }
     }
 
     .m-7 {
-        .box(8, 7, @column);
+        .box(8, 7);
 
         &.center {
-            .center-margins(8, 7, @column);
+            .center-margins(8, 7);
         }
     }
 
     .m-8, .m-full, .full {
-        .box(8, 8, @column);
+        .box(8, 8);
 
         &.center {
-            .center-margins(8, 8, @column);
+            .center-margins(8, 8);
         }
     }
 
 
     // offsets
     .m-offset-1 {
-        .box-offset(8, 1, @column);
+        .box-offset(8, 1);
     }
 
     .m-offset-2, .m-offset-qtr, .offset-qtr {
-        .box-offset(8, 2, @column);
+        .box-offset(8, 2);
     }
 
     .m-offset-3 {
-        .box-offset(8, 3, @column);
+        .box-offset(8, 3);
     }
 
     .m-offset-4, .m-offset-half, .offset-half {
-        .box-offset(8, 4, @column);
+        .box-offset(8, 4);
     }
 
     .m-offset-5 {
-        .box-offset(8, 5, @column);
+        .box-offset(8, 5);
     }
 
     .m-offset-6, .m-offset-qtr3, .offset-qtr3 {
-        .box-offset(8, 6, @column);
+        .box-offset(8, 6);
     }
 
     .m-offset-7 {
-        .box-offset(8, 7, @column);
+        .box-offset(8, 7);
     }
 
     // block grid
     .m-g-1 {
-        .box(10, (10/1), @block);
+        .g-box(10, (10/1));
     }
 
     .m-g-2 {
-        .box(10, (10/2), @block);
+        .g-box(10, (10/2));
     }
 
     .m-g-3 {
-        .box(10, (10/3), @block);
+        .g-box(10, (10/3));
     }
 
     .m-g-4 {
-        .box(10, (10/4), @block);
+        .g-box(10, (10/4));
     }
 
     .m-g-5 {
-        .box(10, (10/5), @block);
+        .g-box(10, (10/5));
     }
 
     .m-g-6 {
-        .box(10, (10/6), @block);
+        .g-box(10, (10/6));
     }
 
     .m-g-7 {
-        .box(10, (10/7), @block);
+        .g-box(10, (10/7));
     }
 
     .m-g-8 {
-        .box(10, (10/8), @block);
+        .g-box(10, (10/8));
     }
 
     .m-g-9 {
-        .box(10, (10/9), @block);
+        .g-box(10, (10/9));
     }
 
     .m-g-10 {
-        .box(10, (10/10), @block);
+        .g-box(10, (10/10));
     }
 
     // display override
@@ -307,186 +307,186 @@
 @media (min-width: @l-min-width) and (max-width: @l-max-width) {
 
     .l-1 {
-        .box(12, 1, @column);
+        .box(12, 1);
 
         &.center {
-            .center-margins(12, 1, @column);
+            .center-margins(12, 1);
         }
     }
 
     .l-2 {
-        .box(12, 2, @column);
+        .box(12, 2);
 
         &.center {
-            .center-margins(12, 2, @column);
+            .center-margins(12, 2);
         }
     }
 
     .l-3, .l-qtr, .qtr {
-        .box(12, 3, @column);
+        .box(12, 3);
 
         &.center {
-            .center-margins(12, 3, @column);
+            .center-margins(12, 3);
         }
     }
 
     .l-4 {
-        .box(12, 4, @column);
+        .box(12, 4);
 
         &.center {
-            .center-margins(12, 4, @column);
+            .center-margins(12, 4);
         }
     }
 
     .l-5 {
-        .box(12, 5, @column);
+        .box(12, 5);
 
         &.center {
-            .center-margins(12, 5, @column);
+            .center-margins(12, 5);
         }
     }
 
     .l-6, .l-half, .half {
-        .box(12, 6, @column);
+        .box(12, 6);
 
         &.center {
-            .center-margins(12, 6, @column);
+            .center-margins(12, 6);
         }
     }
 
     .l-7 {
-        .box(12, 7, @column);
+        .box(12, 7);
 
         &.center {
-            .center-margins(12, 7, @column);
+            .center-margins(12, 7);
         }
     }
     
     .l-8 {
-        .box(12, 8, @column);
+        .box(12, 8);
 
         &.center {
-            .center-margins(12, 8, @column);
+            .center-margins(12, 8);
         }
     }
 
     .l-9, .l-qtr3, .qtr3 {
-        .box(12, 9, @column);
+        .box(12, 9);
 
         &.center {
-            .center-margins(12, 9, @column);
+            .center-margins(12, 9);
         }
     }
 
     .l-10 {
-        .box(12, 10, @column);
+        .box(12, 10);
 
         &.center {
-            .center-margins(12, 10, @column);
+            .center-margins(12, 10);
         }
     }
 
     .l-11 {
-        .box(12, 11, @column);
+        .box(12, 11);
 
         &.center {
-            .center-margins(12, 11, @column);
+            .center-margins(12, 11);
         }
     }
 
     .l-12, .l-full, .full {
-        .box(12, 12, @column);
+        .box(12, 12);
 
         &.center {
-            .center-margins(12, 12, @column);
+            .center-margins(12, 12);
         }
     }
 
 
     // offsets
     .l-offset-1 {
-        .box-offset(12, 1, @column);
+        .box-offset(12, 1);
     }
 
     .l-offset-2 {
-        .box-offset(12, 2, @column);
+        .box-offset(12, 2);
     }
 
     .l-offset-3, .l-offset-qtr, .offset-qtr {
-        .box-offset(12, 3, @column);
+        .box-offset(12, 3);
     }
 
     .l-offset-4 {
-        .box-offset(12, 4, @column);
+        .box-offset(12, 4);
     }
 
     .l-offset-5 {
-        .box-offset(12, 5, @column);
+        .box-offset(12, 5);
     }
 
     .l-offset-6, .l-offset-half, .offset-half {
-        .box-offset(12, 6, @column);
+        .box-offset(12, 6);
     }
 
     .l-offset-7 {
-        .box-offset(12, 7, @column);
+        .box-offset(12, 7);
     }
     
     .l-offset-8 {
-        .box-offset(12, 8, @column);
+        .box-offset(12, 8);
     }
 
     .l-offset-9, .l-offset-qtr3, .offset-qtr3 {
-        .box-offset(12, 9, @column);
+        .box-offset(12, 9);
     }
 
     .l-offset-10 {
-        .box-offset(12, 10, @column);
+        .box-offset(12, 10);
     }
 
     .l-offset-11 {
-        .box-offset(12, 11, @column);
+        .box-offset(12, 11);
     }
 
     // block grid
     .l-g-1 {
-        .box(10, (10/1), @block);
+        .g-box(10, (10/1));
     }
 
     .l-g-2 {
-        .box(10, (10/2), @block);
+        .g-box(10, (10/2));
     }
 
     .l-g-3 {
-        .box(10, (10/3), @block);
+        .g-box(10, (10/3));
     }
 
     .l-g-4 {
-        .box(10, (10/4), @block);
+        .g-box(10, (10/4));
     }
 
     .l-g-5 {
-        .box(10, (10/5), @block);
+        .g-box(10, (10/5));
     }
 
     .l-g-6 {
-        .box(10, (10/6), @block);
+        .g-box(10, (10/6));
     }
 
     .l-g-7 {
-        .box(10, (10/7), @block);
+        .g-box(10, (10/7));
     }
 
     .l-g-8 {
-        .box(10, (10/8), @block);
+        .g-box(10, (10/8));
     }
 
     .l-g-9 {
-        .box(10, (10/9), @block);
+        .g-box(10, (10/9));
     }
 
     .l-g-10 {
-        .box(10, (10/10), @block);
+        .g-box(10, (10/10));
     }
 
     // display override
@@ -499,237 +499,237 @@
 @media (min-width: @xl-min-width) {
 
     .xl-1 {
-        .box(16, 1, @column);
+        .box(16, 1);
 
         &.center {
-            .center-margins(16, 1, @column);
+            .center-margins(16, 1);
         }
     }
 
     .xl-2 {
-        .box(16, 2, @column);
+        .box(16, 2);
 
         &.center {
-            .center-margins(16, 2, @column);
+            .center-margins(16, 2);
         }
     }
 
     .xl-3 {
-        .box(16, 3, @column);
+        .box(16, 3);
 
         &.center {
-            .center-margins(16, 3, @column);
+            .center-margins(16, 3);
         }
     }
 
     .xl-4, .xl-qtr, .qtr {
-        .box(16, 4, @column);
+        .box(16, 4);
 
         &.center {
-            .center-margins(16, 4, @column);
+            .center-margins(16, 4);
         }
     }
 
     .xl-5 {
-        .box(16, 5, @column);
+        .box(16, 5);
 
         &.center {
-            .center-margins(16, 5, @column);
+            .center-margins(16, 5);
         }
     }
 
     .xl-6 {
-        .box(16, 6, @column);
+        .box(16, 6);
 
         &.center {
-            .center-margins(16, 6, @column);
+            .center-margins(16, 6);
         }
     }
 
     .xl-7 {
-        .box(16, 7, @column);
+        .box(16, 7);
 
         &.center {
-            .center-margins(16, 7, @column);
+            .center-margins(16, 7);
         }
     }
 
     .xl-8, .xl-half, .half {
-        .box(16, 8, @column);
+        .box(16, 8);
 
         &.center {
-            .center-margins(16, 8, @column);
+            .center-margins(16, 8);
         }
     }
 
     .xl-9 {
-        .box(16, 9, @column);
+        .box(16, 9);
 
         &.center {
-            .center-margins(16, 9, @column);
+            .center-margins(16, 9);
         }
     }
 
     .xl-10 {
-        .box(16, 10, @column);
+        .box(16, 10);
 
         &.center {
-            .center-margins(16, 10, @column);
+            .center-margins(16, 10);
         }
     }
 
     .xl-11 {
-        .box(16, 11, @column);
+        .box(16, 11);
 
         &.center {
-            .center-margins(16, 11, @column);
+            .center-margins(16, 11);
         }
     }
 
     .xl-12, .xl-qtr3, .qtr3 {
-        .box(16, 12, @column);
+        .box(16, 12);
 
         &.center {
-            .center-margins(16, 12, @column);
+            .center-margins(16, 12);
         }
     }
 
     .xl-13 {
-        .box(16, 13, @column);
+        .box(16, 13);
 
         &.center {
-            .center-margins(16, 13, @column);
+            .center-margins(16, 13);
         }
     }
 
     .xl-14 {
-        .box(16, 14, @column);
+        .box(16, 14);
 
         &.center {
-            .center-margins(16, 14, @column);
+            .center-margins(16, 14);
         }
     }
 
     .xl-15 {
-        .box(16, 15, @column);
+        .box(16, 15);
 
         &.center {
-            .center-margins(16, 15, @column);
+            .center-margins(16, 15);
         }
     }
 
     .xl-16, .xl-full, .full {
-        .box(16, 16, @column);
+        .box(16, 16);
 
         &.center {
-            .center-margins(16, 16, @column);
+            .center-margins(16, 16);
         }
     }
 
     // offsets
     .xl-offset-1 {
-        .box-offset(16, 1, @column);
+        .box-offset(16, 1);
     }
 
     .xl-offset-2 {
-        .box-offset(16, 2, @column);
+        .box-offset(16, 2);
     }
 
     .xl-offset-3 {
-        .box-offset(16, 3, @column);
+        .box-offset(16, 3);
     }
 
     .xl-offset-4, .xl-offset-qtr, .offset-qtr {
-        .box-offset(16, 4, @column);
+        .box-offset(16, 4);
     }
 
     .xl-offset-5 {
-        .box-offset(16, 5, @column);
+        .box-offset(16, 5);
     }
 
     .xl-offset-6 {
-        .box-offset(16, 6, @column);
+        .box-offset(16, 6);
     }
 
     .xl-offset-7 {
-        .box-offset(16, 7, @column);
+        .box-offset(16, 7);
     }
 
     .xl-offset-8, .xl-offset-half, .offset-half {
-        .box-offset(16, 8, @column);
+        .box-offset(16, 8);
     }
 
     .xl-offset-9 {
-        .box-offset(16, 9, @column);
+        .box-offset(16, 9);
     }
 
     .xl-offset-10 {
-        .box-offset(16, 10, @column);
+        .box-offset(16, 10);
     }
 
     .xl-offset-11 {
-        .box-offset(16, 11, @column);
+        .box-offset(16, 11);
     }
 
     .xl-offset-12, .xl-offset-qtr3, .offset-qtr3 {
-        .box-offset(16, 12, @column);
+        .box-offset(16, 12);
     }
 
     .xl-offset-13 {
-        .box-offset(16, 13, @column);
+        .box-offset(16, 13);
     }
 
     .xl-offset-14 {
-        .box-offset(16, 14, @column);
+        .box-offset(16, 14);
     }
 
     .xl-offset-15 {
-        .box-offset(16, 15, @column);
+        .box-offset(16, 15);
     }
 
     .xl-offset-16, .xl-offset-full, .offset-full {
-        .box-offset(16, 16, @column);
+        .box-offset(16, 16);
     }
 
     // block grid
     .xl-g-1 {
-        .box(10, (10/1), @block);
+        .g-box(10, (10/1));
     }
 
     .xl-g-2 {
-        .box(10, (10/2), @block);
+        .g-box(10, (10/2));
     }
 
     .xl-g-3 {
-        .box(10, (10/3), @block);
+        .g-box(10, (10/3));
     }
 
     .xl-g-4 {
-        .box(10, (10/4), @block);
+        .g-box(10, (10/4));
     }
 
     .xl-g-5 {
-        .box(10, (10/5), @block);
+        .g-box(10, (10/5));
     }
 
     .xl-g-6 {
-        .box(10, (10/6), @block);
+        .g-box(10, (10/6));
     }
 
     .xl-g-7 {
-        .box(10, (10/7), @block);
+        .g-box(10, (10/7));
     }
 
     .xl-g-8 {
-        .box(10, (10/8), @block);
+        .g-box(10, (10/8));
     }
 
     .xl-g-9 {
-        .box(10, (10/9), @block);
+        .g-box(10, (10/9));
     }
 
     .xl-g-10 {
-        .box(10, (10/10), @block);
+        .g-box(10, (10/10));
     }
 
     // display override

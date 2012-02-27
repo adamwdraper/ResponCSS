@@ -1,4 +1,5 @@
-ResponCSS
-A fluid responsive CSS grid framework
+ResponCSS : A fluid responsive CSS layout framework
 
-The goal is to create a fluid grid that adapts depending on screen size, adding or subtracting columns to make efficient use of the entire screen.
+Many CSS grids use rows, but ResponCSS flips that focus to columns. By adding or subtracting columns based on screen width, developers are able to take full advantage of a wide array of screen resolutions.
+
+This approach aims to free web apps from the inflexibility (not to mention cross browser headaches) of pixel driven layouts, and allow them to focus on what is most important... the user.

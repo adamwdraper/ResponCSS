@@ -1,0 +1,453 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<meta name="viewport" content="width=device-width">
+        
+        <link rel="stylesheet" href="css/responcss.css">
+        <style type="text/css">
+            h1, header {
+                font-size: 1.4em;
+            }
+
+            h2 {
+                font-size: 1.1em;
+                line-height: 1em;
+
+                span {
+                    font-size: .9em;
+                    color: @gray;
+                    font-weight: normal;
+                }
+            }
+            .examples div {
+                min-height: 30px;
+                background: #EEE;
+                text-align: center;
+                line-height: 30px;
+            }
+
+            .examples div div {
+                    background: #DDD;
+            }
+            
+            .table {
+            width: 100%;
+            margin-bottom: @baseLineHeight;
+            }
+            
+            th,
+            td {
+            padding: 8px;
+            text-align: left;
+            border-top: 1px solid #ddd;
+            }
+            
+            th {
+            font-weight: bold;
+            vertical-align: bottom;
+            }
+            
+            td {
+            vertical-align: top;
+            }
+            
+            thead:first-child tr th,
+            thead:first-child tr td {
+            border-top: 0;
+            }
+            
+            tbody + tbody {
+            border-top: 2px solid #ddd;
+            }
+        </style>
+</head>
+<body class="cf">
+<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <header class="full">
+        <a href="http://github.com/adamwdraper/ResponCSS">ResponCSS</a>
+    </header>
+    <div class="full">
+        <p>
+            ResponCSS is a fluid responsive CSS layout framework that aims to eliminate waisted screen space.  Many CSS grids use rows, but ResponCSS flips that focus to columns. By adding or subtracting columns based on screen width, developers are able to take full advantage of a wide array of screen resolutions.  This approach aims to free web apps from the inflexibility (not to mention cross browser headaches) of pixel driven layouts, and allow them to focus on what is most important... the user.
+        </p>
+        <h1>Columns</h1>
+        <p>
+            As stated above the number of columns changes depending on screen.  This table shows the default settings for ResponCSS.
+        </p>
+        <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Screens</th>
+                <th>Class Prefix</th>
+                <th>Target</th>
+                <th>Layout width</th>
+                <th>Columns</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Small</td>
+                <td>.s-</td>
+                <td>Smartphones and Portrait Tablets</td>
+                <td>768px and below</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Medium</td>
+                <td>.m-</td>
+                <td>Landscape Tablets</td>
+                <td>769px to 979px</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>Large</td>
+                <td>.l-</td>
+                <td>Average Desktops</td>
+                <td>980px to 1209px</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>Xtra Large</td>
+                <td>.xl-</td>
+                <td>Large Display Desktops</td>
+                <td>1210px and up</td>
+                <td>16</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+    <div class="full">
+        <p>Current Screen Size:</p>
+        <span class="m-hide l-hide xl-hide">Small : 4 Columns</span>
+        <span class="s-hide l-hide xl-hide">Medium : 8 Columns</span>
+        <span class="s-hide m-hide xl-hide">Large : 12 Columns</span>
+        <span class="s-hide m-hide l-hide">Extra Large : 16 Columns</span>
+    </div>
+
+    <div class="examples">
+        <h1 class="full">Containers</h1>
+        <p class="full">
+            Containers are designed to be high level parents in your layout. They can be assigned to span a different number of columns for each screen size.
+        </p> 
+        <h2 class="full">Containers Grid <span>| .s-1, .m-6, l-9, .xl-15</span></h2>        
+        <div class="s-1 m-4 l-7 xl-1">
+            <span class="m-hide l-hide xl-hide">.s-1</span>
+            <span class="s-hide l-hide xl-hide">.m-4</span>
+            <span class="s-hide m-hide xl-hide">.l-7</span>
+            <span class="s-hide m-hide l-hide">.xl-1</span>
+        </div>
+        <div class="s-3 m-4 l-5 xl-15">
+            <span class="m-hide l-hide xl-hide">.s-3</span>
+            <span class="s-hide l-hide xl-hide">.m-4</span>
+            <span class="s-hide m-hide xl-hide">.l-5</span>
+            <span class="s-hide m-hide l-hide">.xl-15</span>
+        </div>
+        <div class="s-3 m-2 l-2 xl-6">
+            <span class="m-hide l-hide xl-hide">.s-3</span>
+            <span class="s-hide l-hide xl-hide">.m-2</span>
+            <span class="s-hide m-hide xl-hide">.l-2</span>
+            <span class="s-hide m-hide l-hide">.xl-6</span>
+        </div>
+        <div class="s-1 m-6 l-10 xl-10">
+            <span class="m-hide l-hide xl-hide">.s-1</span>
+            <span class="s-hide l-hide xl-hide">.m-6</span>
+            <span class="s-hide m-hide xl-hide">.l-10</span>
+            <span class="s-hide m-hide l-hide">.xl-10</span>
+        </div>
+        <div class="s-2 m-3 l-4 xl-13">
+            <span class="m-hide l-hide xl-hide">.s-2</span>
+            <span class="s-hide l-hide xl-hide">.m-3</span>
+            <span class="s-hide m-hide xl-hide">.l-4</span>
+            <span class="s-hide m-hide l-hide">.xl-13</span>
+        </div>
+        <div class="s-2 m-5 l-8 xl-3">
+            <span class="m-hide l-hide xl-hide">.s-2</span>
+            <span class="s-hide l-hide xl-hide">.m-5</span>
+            <span class="s-hide m-hide xl-hide">.l-8</span>
+            <span class="s-hide m-hide l-hide">.xl-3</span>
+        </div>
+        <div class="s-4 m-8 l-12 xl-16">
+            <span class="m-hide l-hide xl-hide">.s-4</span>
+            <span class="s-hide l-hide xl-hide">.m-8</span>
+            <span class="s-hide m-hide xl-hide">.l-12</span>
+            <span class="s-hide m-hide l-hide">.xl-16</span>
+        </div>
+
+
+
+        <h2 class="full">Centered <span>| .center</span></h2>        
+        <p class="full">
+            Simply add the class ".center" to center a container.
+        </p> 
+        <div class="s-1 m-1 l-1 xl-1 center">
+            <span class="m-hide l-hide xl-hide">.s-1.center</span>
+            <span class="s-hide l-hide xl-hide">.m-1.center</span>
+            <span class="s-hide m-hide xl-hide">.l-1.center</span>
+            <span class="s-hide m-hide l-hide">.xl-1.center</span>
+        </div>
+        <div class="s-2 m-3 l-4 xl-5 center">
+            <span class="m-hide l-hide xl-hide">.s-2.center</span>
+            <span class="s-hide l-hide xl-hide">.m-3.center</span>
+            <span class="s-hide m-hide xl-hide">.l-4.center</span>
+            <span class="s-hide m-hide l-hide">.xl-5.center</span>
+        </div>
+        <div class="s-3 m-5 l-8 xl-11 center">
+            <span class="m-hide l-hide xl-hide">.s-3.center</span>
+            <span class="s-hide l-hide xl-hide">.m-5.center</span>
+            <span class="s-hide m-hide xl-hide">.l-8.center</span>
+            <span class="s-hide m-hide l-hide">.xl-11.center</span>
+        </div>
+        <div class="s-hide m-7 l-11 xl-15 center">
+            <span class="s-hide l-hide xl-hide">.m-7.center</span>
+            <span class="s-hide m-hide xl-hide">.l-11.center</span>
+            <span class="s-hide m-hide l-hide">.xl-15.center</span>
+        </div>
+
+        <h2 class="full">Shortcuts <span>| .qtr, .half, .s-qtr3, .xl-full</span></h2>        
+        <p class="full">
+            If you know you want a container to span the same no across all screen sizes, you can use one of these shortcuts without assigning a size.
+        </p> 
+        <div class="full">
+            <span>.full</span>
+        </div>
+
+        <div class="qtr3">
+            <span>.qtr3</span>
+        </div>
+        <div class="qtr">
+            <span>.qtr</span>
+        </div>
+
+        <div class="half">
+            <span>.half</span>
+        </div>
+        <div class="s-half m-half l-half xl-half">
+            <span class="m-hide l-hide xl-hide">.s-half</span>
+            <span class="s-hide l-hide xl-hide">.m-half</span>
+            <span class="s-hide m-hide xl-hide">.l-half</span>
+            <span class="s-hide m-hide l-hide">.xl-half</span>
+        </div>
+
+        <div class="s-qtr m-qtr l-qtr xl-qtr">
+            <span class="m-hide l-hide xl-hide">.s-qtr</span>
+            <span class="s-hide l-hide xl-hide">.m-qtr</span>
+            <span class="s-hide m-hide xl-hide">.l-qtr</span>
+            <span class="s-hide m-hide l-hide">.xl-qtr</span>
+        </div>
+        <div class="s-qtr m-qtr l-qtr xl-qtr">
+            <span class="m-hide l-hide xl-hide">.s-qtr</span>
+            <span class="s-hide l-hide xl-hide">.m-qtr</span>
+            <span class="s-hide m-hide xl-hide">.l-qtr</span>
+            <span class="s-hide m-hide l-hide">.xl-qtr</span>
+        </div>
+        <div class="s-1 m-2 l-3 xl-4">
+            <span>.qtr</span>
+        </div>
+        <div class="s-1 m-2 l-3 xl-4">
+            <span>.qtr</span>
+        </div>
+
+        <h2 class="full">Offsets <span>| .s-offset-2, .offset-half</span></h2>
+        <p class="full">
+            Want to push some containers around? That's what offsets are for.
+        </p> 
+        <div class="qtr">
+            <span>.qtr</span>
+        </div>
+        <div class="qtr offset-half">
+            <span>.qtr .offset-half</span>
+        </div>        
+        <div class="qtr offset-half">
+            <span>.qtr .offset-half</span>
+        </div>
+        <div class="qtr">
+            <span>.qtr</span>
+        </div>
+        <div class="half offset-qtr">
+            <span>.half .offset-qtr</span>
+        </div>
+
+        <h1 class="full">Block Grids</h1>
+        <p class="full">
+            Block grids are designed to be used when you want a certain number of items per row.  The blocks are floated left and will flow into a grid pattern.  Block grids are available in 1 - 10 blocks per row.
+        </p>        
+        <h2 class="full">One <span>| .s-g-1, .g-1</span></h2>
+        <div class="full">
+            <div class="g-1">
+                <span>.g-1</span>
+            </div>
+            <div class="s-g-1 m-g-1 l-g-1 xl-g-1">
+                <span class="m-hide l-hide xl-hide">.s-g-1</span>
+                <span class="s-hide l-hide xl-hide">.m-g-1</span>
+                <span class="s-hide m-hide xl-hide">.l-g-1</span>
+                <span class="s-hide m-hide l-hide">.xl-g-1</span>
+            </div>
+        </div>
+        
+        <h2 class="full">Two <span>| .s-g-2, .g-2</span></h2>
+        <div class="full">
+            <div class="g-2">
+                <span>.g-2</span>
+            </div>
+            <div class="g-2">
+                <span>.g-2</span>
+            </div>
+            <div class="s-g-2 m-g-2 l-g-2 xl-g-2">
+                <span class="m-hide l-hide xl-hide">.s-g-2</span>
+                <span class="s-hide l-hide xl-hide">.m-g-2</span>
+                <span class="s-hide m-hide xl-hide">.l-g-2</span>
+                <span class="s-hide m-hide l-hide">.xl-g-2</span>
+            </div>
+        </div>
+        
+        <h2 class="full">Three <span>| .s-g-3, .g-3</span></h2>
+        <div class="full">
+            <div class="g-3">
+                <span>.g-3</span>
+            </div>
+            <div class="g-3">
+                <span>.g-3</span>
+            </div>
+            <div class="g-3">
+                <span>.g-3</span>
+            </div>
+            <div class="s-g-3 m-g-3 l-g-3 xl-g-3">
+                <span class="m-hide l-hide xl-hide">.s-g-3</span>
+                <span class="s-hide l-hide xl-hide">.m-g-3</span>
+                <span class="s-hide m-hide xl-hide">.l-g-3</span>
+                <span class="s-hide m-hide l-hide">.xl-g-3</span>
+            </div>
+        </div>
+        
+        <h2 class="full">Four <span>| .s-g-4, .g-4</span></h2>
+        <div class="full">
+            <div class="g-4">
+                <span>.g-4</span>
+            </div>
+            <div class="g-4">
+                <span>.g-4</span>
+            </div>
+            <div class="g-4">
+                <span>.g-4</span>
+            </div>
+            <div class="g-4">
+                <span>.g-4</span>
+            </div>
+            <div class="g-4">
+                <span>.g-4</span>
+            </div>
+            <div class="g-4">
+                <span>.g-4</span>
+            </div>
+            <div class="s-g-4 m-g-4 l-g-4 xl-g-4">
+                <span class="m-hide l-hide xl-hide">.s-g-4</span>
+                <span class="s-hide l-hide xl-hide">.m-g-4</span>
+                <span class="s-hide m-hide xl-hide">.l-g-4</span>
+                <span class="s-hide m-hide l-hide">.xl-g-4</span>
+            </div>
+        </div>
+        
+        <h2 class="full">Five <span>| .s-g-5, .g-5</span></h2>
+        <div class="full">
+            <div class="g-5">
+                <span>.g-5</span>
+            </div>
+            <div class="g-5">
+                <span>.g-5</span>
+            </div>
+            <div class="g-5">
+                <span>.g-5</span>
+            </div>
+            <div class="g-5">
+                <span>.g-5</span>
+            </div>
+            <div class="g-5">
+                <span>.g-5</span>
+            </div>
+            <div class="g-5">
+                <span>.g-5</span>
+            </div>
+            <div class="g-5">
+                <span>.g-5</span>
+            </div>
+            <div class="s-g-5 m-g-5 l-g-5 xl-g-5">
+                <span class="m-hide l-hide xl-hide">.s-g-5</span>
+                <span class="s-hide l-hide xl-hide">.m-g-5</span>
+                <span class="s-hide m-hide xl-hide">.l-g-5</span>
+                <span class="s-hide m-hide l-hide">.xl-g-5</span>
+            </div>
+        </div>
+    </div>
+        
+    <h1 class="full">Bonus LESS Mixins, Variables and CSS Classes</h1>
+    <div class="full">
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>LESS</th>
+                    <th>Class</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>.clearfix()</td>
+                    <td>.cf</td>
+                    <td>Make sure container contains floats</td>
+                </tr>
+                <tr>
+                    <td>n/a</td>
+                    <td>.clear</td>
+                    <td>Applies "clear: both" style</td>
+                </tr>
+                <tr>
+                    <td>@s-max-width</td>
+                    <td>n/a</td>
+                    <td>Max width for small screen media query</td>
+                </tr>
+                <tr>
+                    <td>@m-min-width</td>
+                    <td>n/a</td>
+                    <td>Min width for medium screen media query</td>
+                </tr>
+                <tr>
+                    <td>@m-max-width</td>
+                    <td>n/a</td>
+                    <td>Max width for medium screen media query</td>
+                </tr>
+                <tr>
+                    <td>@l-min-width</td>
+                    <td>n/a</td>
+                    <td>Min width for large screen media query</td>
+                </tr>
+                <tr>
+                    <td>@l-max-width</td>
+                    <td>n/a</td>
+                    <td>Max width for large screen media query</td>
+                </tr>
+                <tr>
+                    <td>@xl-min-width</td>
+                    <td>n/a</td>
+                    <td>Min width for extra large screen media query</td>
+                </tr>
+                <tr>
+                    <td>@xl-max-width</td>
+                    <td>n/a</td>
+                    <td>Max width for extra large screen media query</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

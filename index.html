@@ -15,8 +15,15 @@
         
         <link rel="stylesheet" href="css/responcss.css">
         <style type="text/css">
+            p {
+                margin: .5em 0;
+            }
             h1, header {
                 font-size: 1.4em;
+            }
+            
+            header p {
+                font-size:.8em;
             }
 
             h2 {
@@ -69,16 +76,32 @@
             tbody + tbody {
             border-top: 2px solid #ddd;
             }
+            
+            .current-size {
+                border:1px solid #ccc;
+                border-left: none;
+                border-right: none;
+                text-align: center;
+                padding-bottom: 1em;
+            }
+            
+            .current-size span {
+                font-size: 1.2em;
+                font-weight: bold;                
+            }
         </style>
 </head>
 <body class="cf">
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     <header class="full">
         <a href="http://github.com/adamwdraper/ResponCSS">ResponCSS</a>
+        <p>
+            Respond dynamically.
+        </p>
     </header>
     <div class="full">
         <p>
-            ResponCSS is a fluid responsive CSS layout framework that aims to eliminate waisted screen space.  Many CSS grids use rows, but ResponCSS flips that focus to columns. By adding or subtracting columns based on screen width, developers are able to take full advantage of a wide array of screen resolutions.  This approach aims to free web apps from the inflexibility (not to mention cross browser headaches) of pixel driven layouts, and allow them to focus on what is most important... the user.
+            ResponCSS is a fluid responsive CSS layout framework based on a dynamic set of columns. By adding or subtracting columns based on screen width, developers are able to take full advantage of a wide array of screen resolutions and free their web apps from the inflexibility (not to mention cross browser headaches) of pixel driven layouts.
         </p>
         <h1>Columns</h1>
         <p>
@@ -126,7 +149,7 @@
         </tbody>
         </table>
     </div>
-    <div class="full">
+    <div class="full current-size">
         <p>Current Screen Size:</p>
         <span class="m-hide l-hide xl-hide">Small : 4 Columns</span>
         <span class="s-hide l-hide xl-hide">Medium : 8 Columns</span>
@@ -411,6 +434,16 @@
                     <td>Applies "clear: both" style</td>
                 </tr>
                 <tr>
+                    <td>@c-gutter</td>
+                    <td>n/a</td>
+                    <td>Adjusts the ratio of column to gutter width.  Set to 0 for no gutters.</td>
+                </tr>
+                <tr>
+                    <td>@g-gutter</td>
+                    <td>n/a</td>
+                    <td>Adjusts the ratio of block grid to gutter width.  Set to 0 for no gutters.</td>
+                </tr>
+                <tr>
                     <td>@s-max-width</td>
                     <td>n/a</td>
                     <td>Max width for small screen media query</td>
@@ -448,6 +481,23 @@
             </tbody>
         </table>
     </div>
-
+    <h1 class="full">Recommendations</h1>
+    <div class="full">
+        ResponCSS is just a small piece of responsive sweetness, so do yourself a favor and use it with:
+        <ul>
+            <li>
+                <a href="http://html5boilerplate.com/">HTML5 ★ Boilerplate</a> - A rock-solid default for HTML5 awesome.
+            </li>
+            <li>
+                <a href="http://github.com/scottjehl/Respond">Respond.js</a> - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)
+            </li>
+            <li>
+                <a href="http://lesscss.org/">LESS CSS</a> - The dynamic stylesheet language
+            </li>
+            <li>
+                <a href="http://incident57.com/less/">LESS.app</a> - watches directories of .less files and compiles the code after every save.
+            </li>
+        </ul> 
+    </div>
 </body>
 </html>

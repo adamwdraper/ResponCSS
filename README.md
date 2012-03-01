@@ -55,7 +55,7 @@ Containers are designed to be high level parents in your layout. They can be ass
 Simply add the class ".center" to center a container.
 
 #### Shortcuts | .qtr, .half, .s-qtr3, .xl-full   
-If you know you want a container to span the same no across all screen sizes, you can use one of these shortcuts without assigning a size.
+If you know you want a container to span the distance across all screen sizes, you can use one of these shortcuts without assigning a size.
 
 #### Overs | .s-over-2, .over-half
 Want to push some containers around? That's what overs are for.

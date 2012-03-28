@@ -19,14 +19,14 @@ As stated above the number of columns changes depending on screen.  This table s
         <td>Small</td>
         <td>.s-</td>
         <td>Smartphones and Portrait Tablets</td>
-        <td>768px and below</td>
+        <td>767px and below</td>
         <td>4</td>
     </tr>
     <tr>
         <td>Medium</td>
         <td>.m-</td>
         <td>Landscape Tablets</td>
-        <td>769px to 979px</td>
+        <td>768px to 979px</td>
         <td>8</td>
     </tr>
     <tr>

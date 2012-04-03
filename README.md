@@ -1,7 +1,6 @@
-# ResponCSS : Respond dynamically
+# ResponCSS
 
-ResponCSS is a fluid responsive CSS layout framework based on a dynamic set of columns. By adding or subtracting columns based on screen width, developers are able to take full advantage of a wide array of screen resolutions and free their web apps from the inflexibility (not to mention cross browser headaches) of pixel driven layouts.
-
+A fluid, responsive CSS layout framework to help free your web apps from the tyranny of pixel "perfection". With the addition of just a few classes, ResponCSS creates a dynamic set of columns so that the entire flow of a page can adapt to take full advantage of the available screen real estate. The main goal is to give designers and developers a responsive foundation so they can move away from the inflexibility (not to mention cross browser headaches) of pixel driven layouts, and use that extra time to focus on what really matters... the user.
 
 ## Columns
 
@@ -64,6 +63,8 @@ Want to push some containers around? That's what overs are for.
 ## Block Grids | .s-g-1, .g-6
 Block grids are designed to be used when you want a certain number of items per row.  The blocks are floated left and will flow into a grid pattern.  Block grids are available in 1 - 10 blocks per row.
 
+## Visibility | .s-hide, .l-show
+Visibility can be adjusted per screen size by using "-hide" and "-show" along with a screen prefix.
 
 ## Bonus LESS Mixins, Variables and CSS Classes
 <table class="table table-bordered table-striped">
@@ -81,6 +82,16 @@ Block grids are designed to be used when you want a certain number of items per 
         <td>n/a</td>
         <td>.clear</td>
         <td>Applies "clear: both" style</td>
+    </tr>
+    <tr>
+        <td>n/a</td>
+        <td>.show</td>
+        <td>Applies "display: block" style. (Can be overridden by the display style of any other ResponCSS class, when applied to the same element)</td>
+    </tr>
+    <tr>
+        <td>n/a</td>
+        <td>.hide</td>
+        <td>Applies "display: none" style. (Can be overridden by the display style of any other ResponCSS class, when applied to the same element)</td>
     </tr>
     <tr>
         <td>@c-gutter</td>

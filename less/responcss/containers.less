@@ -1,7 +1,8 @@
 // Mobile Devices
 @media (max-width: @s-max-width) {
 
-    .s-1, .s-qtr, .qtr {
+    // Universal Sizes
+    .qtr {
         .box(4, 1);
 
         &.center {
@@ -9,7 +10,7 @@
         }
     }
 
-    .s-2, .s-half, .half {
+    .half {
         .box(4, 2);
 
         &.center {
@@ -17,7 +18,7 @@
         }
     }
 
-    .s-3, .s-qtr3, .qtr3 {
+    .qtr3 {
         .box(4, 3);
 
         &.center {
@@ -25,7 +26,40 @@
         }
     }
 
-    .s-4, .s-full, .full {
+    .full {
+        .box(4, 4);
+
+        &.center {
+            .center-margins(4, 4);
+        }
+    }
+
+    // Small Sizes (Overides universals)
+    .s-1, .s-qtr {
+        .box(4, 1);
+
+        &.center {
+            .center-margins(4, 1);
+        }
+    }
+
+    .s-2, .s-half {
+        .box(4, 2);
+
+        &.center {
+            .center-margins(4, 2);
+        }
+    }
+
+    .s-3, .s-qtr3 {
+        .box(4, 3);
+
+        &.center {
+            .center-margins(4, 3);
+        }
+    }
+
+    .s-4, .s-full {
         .box(4, 4);
 
         &.center {
@@ -38,6 +72,40 @@
 // Portrait tablet
 @media (min-width: @m-min-width) and (max-width: @m-max-width) {
 
+    // Universal Sizes
+    .qtr {
+        .box(8, 2);
+
+        &.center {
+            .center-margins(8, 2);
+        }
+    }
+
+    .half {
+        .box(8, 4);
+
+        &.center {
+            .center-margins(8, 4);
+        }
+    }
+
+    .qtr3 {
+        .box(8, 6);
+
+        &.center {
+            .center-margins(8, 6);
+        }
+    }
+
+    .full {
+        .box(8, 8);
+
+        &.center {
+            .center-margins(8, 8);
+        }
+    }
+
+    // Medium Sizes (Overides universals)
     .m-1 {
         .box(8, 1);
 
@@ -46,7 +114,7 @@
         }
     }
 
-    .m-2, .m-qtr, .qtr {
+    .m-2, .m-qtr {
         .box(8, 2);
 
         &.center {
@@ -62,7 +130,7 @@
         }
     }
 
-    .m-4, .m-half, .half {
+    .m-4, .m-half {
         .box(8, 4);
 
         &.center {
@@ -106,6 +174,40 @@
 // Landscape tablet or desktop
 @media (min-width: @l-min-width) and (max-width: @l-max-width) {
 
+    // Universal Sizes
+    .qtr {
+        .box(12, 3);
+
+        &.center {
+            .center-margins(12, 3);
+        }
+    }
+
+    .half {
+        .box(12, 6);
+
+        &.center {
+            .center-margins(12, 6);
+        }
+    }
+
+    .qtr3 {
+        .box(12, 9);
+
+        &.center {
+            .center-margins(12, 9);
+        }
+    }
+
+    .full {
+        .box(12, 12);
+
+        &.center {
+            .center-margins(12, 12);
+        }
+    }
+
+    // Large Sizes (Overides universals)
     .l-1 {
         .box(12, 1);
 
@@ -122,7 +224,7 @@
         }
     }
 
-    .l-3, .l-qtr, .qtr {
+    .l-3, .l-qtr {
         .box(12, 3);
 
         &.center {
@@ -146,7 +248,7 @@
         }
     }
 
-    .l-6, .l-half, .half {
+    .l-6, .l-half {
         .box(12, 6);
 
         &.center {
@@ -170,7 +272,7 @@
         }
     }
 
-    .l-9, .l-qtr3, .qtr3 {
+    .l-9, .l-qtr3 {
         .box(12, 9);
 
         &.center {
@@ -194,7 +296,7 @@
         }
     }
 
-    .l-12, .l-full, .full {
+    .l-12, .l-full {
         .box(12, 12);
 
         &.center {
@@ -206,6 +308,40 @@
 // Large desktop
 @media (min-width: @xl-min-width) {
 
+    // Universal Sizes
+    .qtr {
+        .box(16, 4);
+
+        &.center {
+            .center-margins(16, 4);
+        }
+    }
+
+    .half {
+        .box(16, 8);
+
+        &.center {
+            .center-margins(16, 8);
+        }
+    }
+
+    .qtr3 {
+        .box(16, 12);
+
+        &.center {
+            .center-margins(16, 12);
+        }
+    }
+
+    .full {
+        .box(16, 16);
+
+        &.center {
+            .center-margins(16, 16);
+        }
+    }
+
+    // Xtra-Large Sizes (Overides universals)
     .xl-1 {
         .box(16, 1);
 
@@ -230,7 +366,7 @@
         }
     }
 
-    .xl-4, .xl-qtr, .qtr {
+    .xl-4, .xl-qtr {
         .box(16, 4);
 
         &.center {
@@ -262,7 +398,7 @@
         }
     }
 
-    .xl-8, .xl-half, .half {
+    .xl-8, .xl-half {
         .box(16, 8);
 
         &.center {
@@ -294,7 +430,7 @@
         }
     }
 
-    .xl-12, .xl-qtr3, .qtr3 {
+    .xl-12, .xl-qtr3 {
         .box(16, 12);
 
         &.center {
@@ -326,7 +462,7 @@
         }
     }
 
-    .xl-16, .xl-full, .full {
+    .xl-16, .xl-full {
         .box(16, 16);
 
         &.center {

@@ -8,39 +8,12 @@
     clear: both;
 }
 
-// Mobile Devices
-@media (max-width: @s-max-width) {
-
-    // display override
-    .s-hide {
-        display: none;
-    }
+// universal show
+.show {
+    display: block;
 }
 
- 
-// Portrait tablet
-@media (min-width: @m-min-width) and (max-width: @m-max-width) {
-
-    // display override
-    .m-hide {
-        display:none;
-    }
-}
- 
-// Landscape tablet or desktop
-@media (min-width: @l-min-width) and (max-width: @l-max-width) {
-
-    // display override
-    .l-hide {
-        display: none;
-    }
-}
- 
-// Large desktop
-@media (min-width: @xl-min-width) {
-
-    // display override
-    .xl-hide {
-        display: none;
-    }
+// universal hide
+.hide {
+    display: none;
 }

@@ -21,8 +21,7 @@
 }
 
 .box(@total_cols, @num_cols) when (@c-gutter = 0) {
-    @base: (1 / (@total_cols)) * 100%;
-    width: @num_cols * @base;
+    width: (@num_cols / @total_cols) * 100%;
 }
 
 .box(@total_cols, @num_cols) when (@c-gutter > 0) {
@@ -59,8 +58,7 @@
 }
 
 .g-box(@total_cols, @num_cols) when (@g-gutter = 0) {
-    @base: (1 / (@total_cols)) * 100%;
-    width: @num_cols * @base;
+    width: (@num_cols / @total_cols) * 100%;
 }
 
 .g-box(@total_cols, @num_cols) when (@g-gutter > 0) {

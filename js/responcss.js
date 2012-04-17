@@ -18,22 +18,35 @@
 
         return documentWidth;
     };
+    
+    var dispatchChange = function() {
+        if (document.createEvent) {
+            // all browsers except IE before version 9
+            var changeEvent = document.createEvent("Event");
+            changeEvent.initEvent("ResponCSSSizeChanged", true, false);
+            document.dispatchEvent(changeEvent);
+        }
+    },    
 
-    var init = function() {
+    init = function() {
         updateSize();
     },
 
     updateSize = function() {
-        var documentWidth = ResponCSS.documentWidth();
+        var documentWidth = ResponCSS.documentWidth(), currentSize = ResponCSS.size;
 
         if (documentWidth < 767) {
-            ResponCSS.size = 's';
+            ResponCSS.size = 's';            
         } else if(documentWidth >= 768 && documentWidth < 979) {
             ResponCSS.size = 'm';
         } else if(documentWidth >= 980 && documentWidth < 1209) {
             ResponCSS.size = 'l';
         } else if(documentWidth >= 1210) {
             ResponCSS.size = 'xl';
+        }
+        
+        if(currentSize != ResponCSS.size) {
+            dispatchChange();
         }
     }; 
 

@@ -1,17 +1,54 @@
 // Mobile Devices
 @media (max-width: @s-max-width) {
 
-    // overs
-    .s-over-1, .s-over-qtr, .over-qtr {
+    // Universal Sizes
+    .over-qtr {
         .box-over(4, 1);
     }
 
-    .s-over-2, .s-over-half, .over-half {
+    .over-thrd {
+        .box-over(4, 1.333);
+    }
+
+    .over-half {
         .box-over(4, 2);
     }
 
-    .s-over-3, .s-over-qtr3, .over-qtr3 {
+    .over-thrd2 {
+        .box-over(4, 2.666);
+    }
+
+    .over-qtr3 {
         .box-over(4, 3);
+    }
+
+    .over-full {
+        .box-over(4, 4);
+    }
+
+    // Small Sizes (Overides universals)
+    .s-over-1, .s-over-qtr {
+        .box-over(4, 1);
+    }
+
+    .s-over-thrd {
+        .box-over(4, 1.333);
+    }
+
+    .s-over-2, .s-over-half {
+        .box-over(4, 2);
+    }
+
+    .s-over-thrd2 {
+        .box-over(4, 2.666);
+    }
+
+    .s-over-3, .s-over-qtr3 {
+        .box-over(4, 3);
+    }
+
+    .s-over-4, .s-over-full {
+        .box-over(4, 4);
     }
 }
 
@@ -19,25 +56,58 @@
 // Portrait tablet
 @media (min-width: @m-min-width) and (max-width: @m-max-width) {
 
-    // overs
+    // Universal Sizes
+    .over-qtr {
+        .box-over(8, 2);
+    }
+
+    .over-thrd {
+        .box-over(8, 2.666);
+    }
+
+    .over-half {
+        .box-over(8, 4);
+    }
+
+    .over-thrd2 {
+        .box-over(8, 5.333);
+    }
+
+    .over-qtr3 {
+        .box-over(8, 6);
+    }
+
+    .over-full {
+        .box-over(8, 8);
+    }
+
+    // Medium Sizes (Overides universals)
     .m-over-1 {
         .box-over(8, 1);
     }
 
-    .m-over-2, .m-over-qtr, .over-qtr {
+    .m-over-2, .m-over-qtr {
         .box-over(8, 2);
+    }
+
+    .m-over-thrd {
+        .box-over(8, 2.666);
     }
 
     .m-over-3 {
         .box-over(8, 3);
     }
 
-    .m-over-4, .m-over-half, .over-half {
+    .m-over-4, .m-over-half {
         .box-over(8, 4);
     }
 
     .m-over-5 {
         .box-over(8, 5);
+    }
+
+    .m-over-thrd2 {
+        .box-over(8, 5.333);
     }
 
     .m-over-6, .m-over-qtr3, .over-qtr3 {
@@ -47,12 +117,41 @@
     .m-over-7 {
         .box-over(8, 7);
     }
+
+    .m-over-8, .m-over-full, .over-full {
+        .box-over(8, 8);
+    }
 }
  
 // Landscape tablet or desktop
 @media (min-width: @l-min-width) and (max-width: @l-max-width) {
 
-    // overs
+    // Universal Sizes
+    .over-qtr {
+        .box-over(12, 3);
+    }
+ 
+    .over-thrd {
+        .box-over(12, 4);
+    }
+
+    .over-half {
+        .box-over(12, 6);
+    }
+ 
+    .over-thrd2 {
+        .box-over(12, 8);
+    }
+
+    .over-qtr3 {
+        .box-over(12, 9);
+    }
+
+    .over-full {
+        .box-over(12, 12);
+    }
+
+    // Large Sizes (Overides universals)
     .l-over-1 {
         .box-over(12, 1);
     }
@@ -61,11 +160,11 @@
         .box-over(12, 2);
     }
 
-    .l-over-3, .l-over-qtr, .over-qtr {
+    .l-over-3, .l-over-qtr {
         .box-over(12, 3);
     }
 
-    .l-over-4 {
+    .l-over-4, .l-over-thrd {
         .box-over(12, 4);
     }
 
@@ -73,7 +172,7 @@
         .box-over(12, 5);
     }
 
-    .l-over-6, .l-over-half, .over-half {
+    .l-over-6, .l-over-half {
         .box-over(12, 6);
     }
 
@@ -81,11 +180,11 @@
         .box-over(12, 7);
     }
     
-    .l-over-8 {
+    .l-over-8, .l-over-thrd2 {
         .box-over(12, 8);
     }
 
-    .l-over-9, .l-over-qtr3, .over-qtr3 {
+    .l-over-9, .l-over-qtr3 {
         .box-over(12, 9);
     }
 
@@ -96,12 +195,41 @@
     .l-over-11 {
         .box-over(12, 11);
     }
+
+    .l-over-12, .l-over-full {
+        .box-over(12, 12);
+    }
 }
  
 // Large desktop
 @media (min-width: @xl-min-width) {
 
-    // overs
+    // Universal Sizes
+    .over-qtr {
+        .box-over(16, 4);
+    }
+ 
+    .over-thrd {
+        .box-over(16, 5.333);
+    }
+
+    .over-half {
+        .box-over(16, 8);
+    }
+ 
+    .over-thrd2 {
+        .box-over(16, 10.666);
+    }
+
+    .over-qtr3 {
+        .box-over(16, 12);
+    }
+
+    .over-full {
+        .box-over(16, 16);
+    }
+
+    // Xtra-Large Sizes (Overides universals)
     .xl-over-1 {
         .box-over(16, 1);
     }
@@ -114,12 +242,16 @@
         .box-over(16, 3);
     }
 
-    .xl-over-4, .xl-over-qtr, .over-qtr {
+    .xl-over-4, .xl-over-qtr {
         .box-over(16, 4);
     }
 
     .xl-over-5 {
         .box-over(16, 5);
+    }
+ 
+    .xl-over-thrd {
+        .box-over(16, 5.333);
     }
 
     .xl-over-6 {
@@ -130,7 +262,7 @@
         .box-over(16, 7);
     }
 
-    .xl-over-8, .xl-over-half, .over-half {
+    .xl-over-8, .xl-over-half {
         .box-over(16, 8);
     }
 
@@ -141,12 +273,16 @@
     .xl-over-10 {
         .box-over(16, 10);
     }
+ 
+    .xl-over-thrd2 {
+        .box-over(16, 10.666);
+    }
 
     .xl-over-11 {
         .box-over(16, 11);
     }
 
-    .xl-over-12, .xl-over-qtr3, .over-qtr3 {
+    .xl-over-12, .xl-over-qtr3 {
         .box-over(16, 12);
     }
 
@@ -162,7 +298,7 @@
         .box-over(16, 15);
     }
 
-    .xl-over-16, .xl-over-full, .over-full {
+    .xl-over-16, .xl-over-full {
         .box-over(16, 16);
     }
 }

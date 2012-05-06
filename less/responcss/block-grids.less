@@ -1,46 +1,46 @@
-// block grid
-.g-1 {
-    .g-box(10, (10/1));
-}
-
-.g-2 {
-    .g-box(10, (10/2));
-}
-
-.g-3 {
-    .g-box(10, (10/3));
-}
-
-.g-4 {
-    .g-box(10, (10/4));
-}
-
-.g-5 {
-    .g-box(10, (10/5));
-}
-
 // Mobile Devices
 @media (max-width: @s-max-width) {
 
-    // block grid
-    .s-g-1 {
-        .g-box(10, (10/1));
+    // Universal block grid
+    .b-1 {
+        .b-box(10, (10/1), @s-b-gutter);
     }
 
-    .s-g-2 {
-        .g-box(10, (10/2));
+    .b-2 {
+        .b-box(10, (10/2), @s-b-gutter);
     }
 
-    .s-g-3 {
-        .g-box(10, (10/3));
+    .b-3 {
+        .b-box(10, (10/3), @s-b-gutter);
     }
 
-    .s-g-4 {
-        .g-box(10, (10/4));
+    .b-4 {
+        .b-box(10, (10/4), @s-b-gutter);
     }
 
-    .s-g-5 {
-        .g-box(10, (10/5));
+    .b-5 {
+        .b-box(10, (10/5), @s-b-gutter);
+    }
+
+    // Small Sizes (Overides universals)
+    .s-b-1 {
+        .b-box(10, (10/1), @s-b-gutter);
+    }
+
+    .s-b-2 {
+        .b-box(10, (10/2), @s-b-gutter);
+    }
+
+    .s-b-3 {
+        .b-box(10, (10/3), @s-b-gutter);
+    }
+
+    .s-b-4 {
+        .b-box(10, (10/4), @s-b-gutter);
+    }
+
+    .s-b-5 {
+        .b-box(10, (10/5), @s-b-gutter);
     }
 }
 
@@ -48,74 +48,137 @@
 // Portrait tablet
 @media (min-width: @m-min-width) and (max-width: @m-max-width) {
 
-    // block grid
-    .m-g-1 {
-        .g-box(10, (10/1));
+    // Universal block grid
+    .b-1 {
+        .b-box(10, (10/1), @m-b-gutter);
     }
 
-    .m-g-2 {
-        .g-box(10, (10/2));
+    .b-2 {
+        .b-box(10, (10/2), @m-b-gutter);
     }
 
-    .m-g-3 {
-        .g-box(10, (10/3));
+    .b-3 {
+        .b-box(10, (10/3), @m-b-gutter);
     }
 
-    .m-g-4 {
-        .g-box(10, (10/4));
+    .b-4 {
+        .b-box(10, (10/4), @m-b-gutter);
     }
 
-    .m-g-5 {
-        .g-box(10, (10/5));
+    .b-5 {
+        .b-box(10, (10/5), @m-b-gutter);
+    }
+
+    // Medium Sizes (Overides universals)
+    .m-b-1 {
+        .b-box(10, (10/1), @m-b-gutter);
+    }
+
+    .m-b-2 {
+        .b-box(10, (10/2), @m-b-gutter);
+    }
+
+    .m-b-3 {
+        .b-box(10, (10/3), @m-b-gutter);
+    }
+
+    .m-b-4 {
+        .b-box(10, (10/4), @m-b-gutter);
+    }
+
+    .m-b-5 {
+        .b-box(10, (10/5), @m-b-gutter);
     }
 }
  
 // Landscape tablet or desktop
 @media (min-width: @l-min-width) and (max-width: @l-max-width) {
 
-    // block grid
-    .l-g-1 {
-        .g-box(10, (10/1));
+    // Universal block grid
+    .b-1 {
+        .b-box(10, (10/1), @l-b-gutter);
     }
 
-    .l-g-2 {
-        .g-box(10, (10/2));
+    .b-2 {
+        .b-box(10, (10/2), @l-b-gutter);
     }
 
-    .l-g-3 {
-        .g-box(10, (10/3));
+    .b-3 {
+        .b-box(10, (10/3), @l-b-gutter);
     }
 
-    .l-g-4 {
-        .g-box(10, (10/4));
+    .b-4 {
+        .b-box(10, (10/4), @l-b-gutter);
     }
 
-    .l-g-5 {
-        .g-box(10, (10/5));
+    .b-5 {
+        .b-box(10, (10/5), @l-b-gutter);
+    }
+
+    // Large Sizes (Overides universals)
+    .l-b-1 {
+        .b-box(10, (10/1), @l-b-gutter);
+    }
+
+    .l-b-2 {
+        .b-box(10, (10/2), @l-b-gutter);
+    }
+
+    .l-b-3 {
+        .b-box(10, (10/3), @l-b-gutter);
+    }
+
+    .l-b-4 {
+        .b-box(10, (10/4), @l-b-gutter);
+    }
+
+    .l-b-5 {
+        .b-box(10, (10/5), @l-b-gutter);
     }
 }
  
 // Large desktop
 @media (min-width: @xl-min-width) {
 
-    // block grid
-    .xl-g-1 {
-        .g-box(10, (10/1));
+    // Universal block grid
+    .b-1 {
+        .b-box(10, (10/1), @xl-b-gutter);
     }
 
-    .xl-g-2 {
-        .g-box(10, (10/2));
+    .b-2 {
+        .b-box(10, (10/2), @xl-b-gutter);
     }
 
-    .xl-g-3 {
-        .g-box(10, (10/3));
+    .b-3 {
+        .b-box(10, (10/3), @xl-b-gutter);
     }
 
-    .xl-g-4 {
-        .g-box(10, (10/4));
+    .b-4 {
+        .b-box(10, (10/4), @xl-b-gutter);
     }
 
-    .xl-g-5 {
-        .g-box(10, (10/5));
+    .b-5 {
+        .b-box(10, (10/5), @xl-b-gutter);
+    }
+
+    // Xtra-Large Sizes (Overides universals)
+    .xl-b-1 {
+        .b-box(10, (10/1), @xl-b-gutter);
+    }
+
+    .xl-b-2 {
+        .b-box(10, (10/2), @xl-b-gutter);
+    }
+
+    .xl-b-3 {
+        .b-box(10, (10/3), @xl-b-gutter);
+    }
+
+    .xl-b-4 {
+        .b-box(10, (10/4), @xl-b-gutter);
+    }
+
+    .xl-b-5 {
+        .b-box(10, (10/5), @xl-b-gutter);
     }
 }

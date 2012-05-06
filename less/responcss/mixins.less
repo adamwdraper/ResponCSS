@@ -15,42 +15,42 @@
 }
 
 // Box base style --------------------------------------------
-.box(@size_cols, @num_cols) {
+.box(@size_cols, @num_cols, @gutter) {
     float: left;
     display:block;
 }
 
-.box(@size_cols, @num_cols) when (@c-gutter = 0) {
+.box(@size_cols, @num_cols, @gutter) when (@gutter = 0) {
     @base: (1 / (@size_cols)) * 100%;
     width: @num_cols * @base;
 }
 
-.box(@size_cols, @num_cols) when (@c-gutter > 0) {
-    @total_cols: @size_cols + @c-gutter;
+.box(@size_cols, @num_cols, @gutter) when (@gutter > 0) {
+    @total_cols: @size_cols + @gutter;
     @total_margins: @size_cols * 2;
     @base: (1 / @total_cols) * 100%;
-    @margin-width: (@base * @c-gutter) / @total_margins;    
+    @margin-width: (@base * @gutter) / @total_margins;    
     width: ((@margin-width * 2) * (@num_cols - 1)) + (@num_cols * @base);
     margin: 0 @margin-width;
 }
 
 
 // Margin for overs ----------------------------------------------
-.box-over(@size_cols, @num_cols) when (@c-gutter = 0) {
+.box-over(@size_cols, @num_cols, @gutter) when (@gutter = 0) {
     @base: (1 / (@size_cols)) * 100%;
     margin-left: @num_cols * @base;
 }
 
-.box-over(@size_cols, @num_cols) when (@c-gutter > 0) {
-    @total_cols: @size_cols + @c-gutter;
+.box-over(@size_cols, @num_cols, @gutter) when (@gutter > 0) {
+    @total_cols: @size_cols + @gutter;
     @total_margins: @size_cols * 2;
     @base: (1 / @total_cols) * 100%;
-    @margin-width: (@base * @c-gutter) / @total_margins;
+    @margin-width: (@base * @gutter) / @total_margins;
     margin-left: ((@margin-width * 2) * (@num_cols - 1)) + (@num_cols * @base) + (@margin-width * 3);
 }
 
 // Margins for Centered boxes --------------------------------------------------
-.center-margins(@size_cols, @num_cols) when (@c-gutter = 0) {
+.center-margins(@size_cols, @num_cols, @gutter) when (@gutter = 0) {
     @base: (1 / (@size_cols)) * 100%;
     @margin_cols: (@size_cols - @num_cols) / 2;
     @margin: @margin_cols * @base;
@@ -58,11 +58,11 @@
     margin-left: @margin;
 }
 
-.center-margins(@size_cols, @num_cols) when (@c-gutter > 0) {
-    @total_cols: @size_cols + @c-gutter;
+.center-margins(@size_cols, @num_cols, @gutter) when (@gutter > 0) {
+    @total_cols: @size_cols + @gutter;
     @total_margins: @size_cols * 2;
     @base: (1 / @total_cols) * 100%;
-    @margin-width: (@base * @c-gutter) / @total_margins;
+    @margin-width: (@base * @gutter) / @total_margins;
     @margin_cols: (@size_cols - @num_cols) / 2;
     @margin: ((@margin-width * 2) * (@margin_cols - 1)) + (@margin_cols * @base) + (@margin-width * 3);
     margin-right: @margin;
@@ -70,21 +70,21 @@
 }
 
 // Box base style -----------------------------------------------------
-.g-box(@size_cols, @num_cols) {
+.b-box(@size_cols, @num_cols, @gutter) {
     float: left;
     display:block;
 }
 
-.g-box(@size_cols, @num_cols) when (@g-gutter = 0) {
+.b-box(@size_cols, @num_cols, @gutter) when (@gutter = 0) {
     @base: (1 / (@size_cols)) * 100%;
     width: @num_cols * @base;
 }
 
-.g-box(@size_cols, @num_cols) when (@g-gutter > 0) {
-    @total_cols: @size_cols + @g-gutter;
+.b-box(@size_cols, @num_cols, @gutter) when (@gutter > 0) {
+    @total_cols: @size_cols + @gutter;
     @total_margins: @size_cols * 2;
     @base: (1 / @total_cols) * 100%;
-    @margin-width: (@base * @g-gutter) / @total_margins;    
+    @margin-width: (@base * @gutter) / @total_margins;    
     width: ((@margin-width * 2) * (@num_cols - 1)) + (@num_cols * @base);
     margin: 0 @margin-width;
 }

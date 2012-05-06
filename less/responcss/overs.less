@@ -3,52 +3,44 @@
 
     // Universal Sizes
     .over-qtr {
-        .box-over(4, 1);
+        .box-over(4, 1, @s-gutter);
     }
 
     .over-thrd {
-        .box-over(4, 1.333);
+        .box-over(4, (4/3), @s-gutter);
     }
 
     .over-half {
-        .box-over(4, 2);
+        .box-over(4, 2, @s-gutter);
     }
 
     .over-thrd2 {
-        .box-over(4, 2.666);
+        .box-over(4, ((4/3) * 2), @s-gutter);
     }
 
     .over-qtr3 {
-        .box-over(4, 3);
-    }
-
-    .over-full {
-        .box-over(4, 4);
+        .box-over(4, 3, @s-gutter);
     }
 
     // Small Sizes (Overides universals)
     .s-over-1, .s-over-qtr {
-        .box-over(4, 1);
+        .box-over(4, 1, @s-gutter);
     }
 
     .s-over-thrd {
-        .box-over(4, 1.333);
+        .box-over(4, (4/3), @s-gutter);
     }
 
     .s-over-2, .s-over-half {
-        .box-over(4, 2);
+        .box-over(4, 2, @s-gutter);
     }
 
     .s-over-thrd2 {
-        .box-over(4, 2.666);
+        .box-over(4, ((4/3) * 2), @s-gutter);
     }
 
     .s-over-3, .s-over-qtr3 {
-        .box-over(4, 3);
-    }
-
-    .s-over-4, .s-over-full {
-        .box-over(4, 4);
+        .box-over(4, 3, @s-gutter);
     }
 }
 
@@ -58,68 +50,60 @@
 
     // Universal Sizes
     .over-qtr {
-        .box-over(8, 2);
+        .box-over(8, 2, @m-gutter);
     }
 
     .over-thrd {
-        .box-over(8, 2.666);
+        .box-over(8, (8/3), @m-gutter);
     }
 
     .over-half {
-        .box-over(8, 4);
+        .box-over(8, 4, @m-gutter);
     }
 
     .over-thrd2 {
-        .box-over(8, 5.333);
+        .box-over(8, ((8/3) * 2), @m-gutter);
     }
 
     .over-qtr3 {
-        .box-over(8, 6);
-    }
-
-    .over-full {
-        .box-over(8, 8);
+        .box-over(8, 6, @m-gutter);
     }
 
     // Medium Sizes (Overides universals)
     .m-over-1 {
-        .box-over(8, 1);
+        .box-over(8, 1, @m-gutter);
     }
 
     .m-over-2, .m-over-qtr {
-        .box-over(8, 2);
+        .box-over(8, 2, @m-gutter);
     }
 
     .m-over-thrd {
-        .box-over(8, 2.666);
+        .box-over(8, (8/3), @m-gutter);
     }
 
     .m-over-3 {
-        .box-over(8, 3);
+        .box-over(8, 3, @m-gutter);
     }
 
     .m-over-4, .m-over-half {
-        .box-over(8, 4);
+        .box-over(8, 4, @m-gutter);
     }
 
     .m-over-5 {
-        .box-over(8, 5);
+        .box-over(8, 5, @m-gutter);
     }
 
     .m-over-thrd2 {
-        .box-over(8, 5.333);
+        .box-over(8, ((8/3) * 2), @m-gutter);
     }
 
     .m-over-6, .m-over-qtr3, .over-qtr3 {
-        .box-over(8, 6);
+        .box-over(8, 6, @m-gutter);
     }
 
     .m-over-7 {
-        .box-over(8, 7);
-    }
-
-    .m-over-8, .m-over-full, .over-full {
-        .box-over(8, 8);
+        .box-over(8, 7, @m-gutter);
     }
 }
  
@@ -128,76 +112,68 @@
 
     // Universal Sizes
     .over-qtr {
-        .box-over(12, 3);
+        .box-over(12, 3, @l-gutter);
     }
  
     .over-thrd {
-        .box-over(12, 4);
+        .box-over(12, 4, @l-gutter);
     }
 
     .over-half {
-        .box-over(12, 6);
+        .box-over(12, 6, @l-gutter);
     }
  
     .over-thrd2 {
-        .box-over(12, 8);
+        .box-over(12, 8, @l-gutter);
     }
 
     .over-qtr3 {
-        .box-over(12, 9);
-    }
-
-    .over-full {
-        .box-over(12, 12);
+        .box-over(12, 9, @l-gutter);
     }
 
     // Large Sizes (Overides universals)
     .l-over-1 {
-        .box-over(12, 1);
+        .box-over(12, 1, @l-gutter);
     }
 
     .l-over-2 {
-        .box-over(12, 2);
+        .box-over(12, 2, @l-gutter);
     }
 
     .l-over-3, .l-over-qtr {
-        .box-over(12, 3);
+        .box-over(12, 3, @l-gutter);
     }
 
     .l-over-4, .l-over-thrd {
-        .box-over(12, 4);
+        .box-over(12, 4, @l-gutter);
     }
 
     .l-over-5 {
-        .box-over(12, 5);
+        .box-over(12, 5, @l-gutter);
     }
 
     .l-over-6, .l-over-half {
-        .box-over(12, 6);
+        .box-over(12, 6, @l-gutter);
     }
 
     .l-over-7 {
-        .box-over(12, 7);
+        .box-over(12, 7, @l-gutter);
     }
     
     .l-over-8, .l-over-thrd2 {
-        .box-over(12, 8);
+        .box-over(12, 8, @l-gutter);
     }
 
     .l-over-9, .l-over-qtr3 {
-        .box-over(12, 9);
+        .box-over(12, 9, @l-gutter);
     }
 
     .l-over-10 {
-        .box-over(12, 10);
+        .box-over(12, 10, @l-gutter);
     }
 
     .l-over-11 {
-        .box-over(12, 11);
-    }
-
-    .l-over-12, .l-over-full {
-        .box-over(12, 12);
+        .box-over(12, 11, @l-gutter);
     }
 }
  
@@ -206,99 +182,91 @@
 
     // Universal Sizes
     .over-qtr {
-        .box-over(16, 4);
+        .box-over(16, 4, @xl-gutter);
     }
  
     .over-thrd {
-        .box-over(16, 5.333);
+        .box-over(16, (16/3), @xl-gutter);
     }
 
     .over-half {
-        .box-over(16, 8);
+        .box-over(16, 8, @xl-gutter);
     }
  
     .over-thrd2 {
-        .box-over(16, 10.666);
+        .box-over(16, 10.666, @xl-gutter);
     }
 
     .over-qtr3 {
-        .box-over(16, 12);
-    }
-
-    .over-full {
-        .box-over(16, 16);
+        .box-over(16, 12, @xl-gutter);
     }
 
     // Xtra-Large Sizes (Overides universals)
     .xl-over-1 {
-        .box-over(16, 1);
+        .box-over(16, 1, @xl-gutter);
     }
 
     .xl-over-2 {
-        .box-over(16, 2);
+        .box-over(16, 2, @xl-gutter);
     }
 
     .xl-over-3 {
-        .box-over(16, 3);
+        .box-over(16, 3, @xl-gutter);
     }
 
     .xl-over-4, .xl-over-qtr {
-        .box-over(16, 4);
+        .box-over(16, 4, @xl-gutter);
     }
 
     .xl-over-5 {
-        .box-over(16, 5);
+        .box-over(16, 5, @xl-gutter);
     }
  
     .xl-over-thrd {
-        .box-over(16, 5.333);
+        .box-over(16, 5.333, @xl-gutter);
     }
 
     .xl-over-6 {
-        .box-over(16, 6);
+        .box-over(16, 6, @xl-gutter);
     }
 
     .xl-over-7 {
-        .box-over(16, 7);
+        .box-over(16, 7, @xl-gutter);
     }
 
     .xl-over-8, .xl-over-half {
-        .box-over(16, 8);
+        .box-over(16, 8, @xl-gutter);
     }
 
     .xl-over-9 {
-        .box-over(16, 9);
+        .box-over(16, 9, @xl-gutter);
     }
 
     .xl-over-10 {
-        .box-over(16, 10);
+        .box-over(16, 10, @xl-gutter);
     }
  
     .xl-over-thrd2 {
-        .box-over(16, 10.666);
+        .box-over(16, ((16/3) * 2), @xl-gutter);
     }
 
     .xl-over-11 {
-        .box-over(16, 11);
+        .box-over(16, 11, @xl-gutter);
     }
 
     .xl-over-12, .xl-over-qtr3 {
-        .box-over(16, 12);
+        .box-over(16, 12, @xl-gutter);
     }
 
     .xl-over-13 {
-        .box-over(16, 13);
+        .box-over(16, 13, @xl-gutter);
     }
 
     .xl-over-14 {
-        .box-over(16, 14);
+        .box-over(16, 14, @xl-gutter);
     }
 
     .xl-over-15 {
-        .box-over(16, 15);
-    }
-
-    .xl-over-16, .xl-over-full {
-        .box-over(16, 16);
+        .box-over(16, 15, @xl-gutter);
     }
 }

@@ -9,7 +9,7 @@ A fluid, responsive CSS layout framework to help free your web apps from the inf
 * Classes that let elements span a different number of columns for each screen size
 * A grid that is not defined in pixels, but instead uses an adjustable ratio to determine column and gutter size
 * Screens sizes that target 4 device categories
-* LESS CSS files for easy customization
+* SASS and LESS CSS files for easy customization
 * Optional Javascript keep your app aware of the current screen size, and alert to any changes
 
 ## Documentation and Examples at <a href="http://responcss.com">ResponCSS.com</a>

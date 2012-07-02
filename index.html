@@ -13,13 +13,14 @@
 
 	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         
-        <link rel="stylesheet" href="css/responcss.css">
+        <link rel="stylesheet" href="scss/css/responcss.css">
         <style type="text/css">
             p {
                 margin: .5em 0;
             }
             h1, header {
                 font-size: 1.4em;
+                margin-top: 1.5em;
             }
             
             header p {
@@ -37,6 +38,8 @@
                 }
             }
             .examples div {
+                margin-top: 4px;
+                margin-bottom: 4px;
                 min-height: 30px;
                 background: #EEE;
                 text-align: center;
@@ -44,7 +47,9 @@
             }
 
             .examples div div {
-                    background: #DDD;
+                background: #DDD;
+                margin-top: 4px;
+                margin-bottom: 4px;
             }
             
             .table {
@@ -251,6 +256,13 @@
             <span>.qtr</span>
         </div>
 
+        <div class="thrd">
+            <span>.thrd</span>
+        </div>
+        <div class="thrd2">
+            <span>.thrd2</span>
+        </div>
+
         <div class="half">
             <span>.half</span>
         </div>
@@ -304,110 +316,110 @@
         <p class="full">
             Block grids are designed to be used when you want a certain number of items per row.  The blocks are floated left and will flow into a grid pattern.  Block grids are available in 1 - 10 blocks per row.
         </p>        
-        <h2 class="full">One <span>| .s-g-1, .g-1</span></h2>
+        <h2 class="full">One <span>| .s-b-1, .b-1</span></h2>
         <div class="full">
-            <div class="g-1">
-                <span>.g-1</span>
+            <div class="b-1">
+                <span>.b-1</span>
             </div>
-            <div class="s-g-1 m-g-1 l-g-1 xl-g-1">
-                <span class="m-hide l-hide xl-hide">.s-g-1</span>
-                <span class="s-hide l-hide xl-hide">.m-g-1</span>
-                <span class="s-hide m-hide xl-hide">.l-g-1</span>
-                <span class="s-hide m-hide l-hide">.xl-g-1</span>
+            <div class="s-b-1 m-b-1 l-b-1 xl-b-1">
+                <span class="m-hide l-hide xl-hide">.s-b-1</span>
+                <span class="s-hide l-hide xl-hide">.m-b-1</span>
+                <span class="s-hide m-hide xl-hide">.l-b-1</span>
+                <span class="s-hide m-hide l-hide">.xl-b-1</span>
             </div>
         </div>
         
-        <h2 class="full">Two <span>| .s-g-2, .g-2</span></h2>
+        <h2 class="full">Two <span>| .s-b-2, .b-2</span></h2>
         <div class="full">
-            <div class="g-2">
-                <span>.g-2</span>
+            <div class="b-2">
+                <span>.b-2</span>
             </div>
-            <div class="g-2">
-                <span>.g-2</span>
+            <div class="b-2">
+                <span>.b-2</span>
             </div>
-            <div class="s-g-2 m-g-2 l-g-2 xl-g-2">
-                <span class="m-hide l-hide xl-hide">.s-g-2</span>
-                <span class="s-hide l-hide xl-hide">.m-g-2</span>
-                <span class="s-hide m-hide xl-hide">.l-g-2</span>
-                <span class="s-hide m-hide l-hide">.xl-g-2</span>
+            <div class="s-b-2 m-b-2 l-b-2 xl-b-2">
+                <span class="m-hide l-hide xl-hide">.s-b-2</span>
+                <span class="s-hide l-hide xl-hide">.m-b-2</span>
+                <span class="s-hide m-hide xl-hide">.l-b-2</span>
+                <span class="s-hide m-hide l-hide">.xl-b-2</span>
             </div>
         </div>
         
-        <h2 class="full">Three <span>| .s-g-3, .g-3</span></h2>
+        <h2 class="full">Three <span>| .s-b-3, .b-3</span></h2>
         <div class="full">
-            <div class="g-3">
-                <span>.g-3</span>
+            <div class="b-3">
+                <span>.b-3</span>
             </div>
-            <div class="g-3">
-                <span>.g-3</span>
+            <div class="b-3">
+                <span>.b-3</span>
             </div>
-            <div class="g-3">
-                <span>.g-3</span>
+            <div class="b-3">
+                <span>.b-3</span>
             </div>
-            <div class="s-g-3 m-g-3 l-g-3 xl-g-3">
-                <span class="m-hide l-hide xl-hide">.s-g-3</span>
-                <span class="s-hide l-hide xl-hide">.m-g-3</span>
-                <span class="s-hide m-hide xl-hide">.l-g-3</span>
-                <span class="s-hide m-hide l-hide">.xl-g-3</span>
+            <div class="s-b-3 m-b-3 l-b-3 xl-b-3">
+                <span class="m-hide l-hide xl-hide">.s-b-3</span>
+                <span class="s-hide l-hide xl-hide">.m-b-3</span>
+                <span class="s-hide m-hide xl-hide">.l-b-3</span>
+                <span class="s-hide m-hide l-hide">.xl-b-3</span>
             </div>
         </div>
         
-        <h2 class="full">Four <span>| .s-g-4, .g-4</span></h2>
+        <h2 class="full">Four <span>| .s-b-4, .b-4</span></h2>
         <div class="full">
-            <div class="g-4">
-                <span>.g-4</span>
+            <div class="b-4">
+                <span>.b-4</span>
             </div>
-            <div class="g-4">
-                <span>.g-4</span>
+            <div class="b-4">
+                <span>.b-4</span>
             </div>
-            <div class="g-4">
-                <span>.g-4</span>
+            <div class="b-4">
+                <span>.b-4</span>
             </div>
-            <div class="g-4">
-                <span>.g-4</span>
+            <div class="b-4">
+                <span>.b-4</span>
             </div>
-            <div class="g-4">
-                <span>.g-4</span>
+            <div class="b-4">
+                <span>.b-4</span>
             </div>
-            <div class="g-4">
-                <span>.g-4</span>
+            <div class="b-4">
+                <span>.b-4</span>
             </div>
-            <div class="s-g-4 m-g-4 l-g-4 xl-g-4">
-                <span class="m-hide l-hide xl-hide">.s-g-4</span>
-                <span class="s-hide l-hide xl-hide">.m-g-4</span>
-                <span class="s-hide m-hide xl-hide">.l-g-4</span>
-                <span class="s-hide m-hide l-hide">.xl-g-4</span>
+            <div class="s-b-4 m-b-4 l-b-4 xl-b-4">
+                <span class="m-hide l-hide xl-hide">.s-b-4</span>
+                <span class="s-hide l-hide xl-hide">.m-b-4</span>
+                <span class="s-hide m-hide xl-hide">.l-b-4</span>
+                <span class="s-hide m-hide l-hide">.xl-b-4</span>
             </div>
         </div>
         
-        <h2 class="full">Five <span>| .s-g-5, .g-5</span></h2>
+        <h2 class="full">Five <span>| .s-b-5, .b-5</span></h2>
         <div class="full">
-            <div class="g-5">
-                <span>.g-5</span>
+            <div class="b-5">
+                <span>.b-5</span>
             </div>
-            <div class="g-5">
-                <span>.g-5</span>
+            <div class="b-5">
+                <span>.b-5</span>
             </div>
-            <div class="g-5">
-                <span>.g-5</span>
+            <div class="b-5">
+                <span>.b-5</span>
             </div>
-            <div class="g-5">
-                <span>.g-5</span>
+            <div class="b-5">
+                <span>.b-5</span>
             </div>
-            <div class="g-5">
-                <span>.g-5</span>
+            <div class="b-5">
+                <span>.b-5</span>
             </div>
-            <div class="g-5">
-                <span>.g-5</span>
+            <div class="b-5">
+                <span>.b-5</span>
             </div>
-            <div class="g-5">
-                <span>.g-5</span>
+            <div class="b-5">
+                <span>.b-5</span>
             </div>
-            <div class="s-g-5 m-g-5 l-g-5 xl-g-5">
-                <span class="m-hide l-hide xl-hide">.s-g-5</span>
-                <span class="s-hide l-hide xl-hide">.m-g-5</span>
-                <span class="s-hide m-hide xl-hide">.l-g-5</span>
-                <span class="s-hide m-hide l-hide">.xl-g-5</span>
+            <div class="s-b-5 m-b-5 l-b-5 xl-b-5">
+                <span class="m-hide l-hide xl-hide">.s-b-5</span>
+                <span class="s-hide l-hide xl-hide">.m-b-5</span>
+                <span class="s-hide m-hide xl-hide">.l-b-5</span>
+                <span class="s-hide m-hide l-hide">.xl-b-5</span>
             </div>
         </div>
     </div>

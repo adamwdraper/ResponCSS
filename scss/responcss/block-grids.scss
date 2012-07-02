@@ -1,0 +1,43 @@
+// Mobile Devices
+@media (max-width: 767px) {
+
+    @for $i from 1 to $block-grid-through {
+        .b-#{$i}, .s-b-#{$i} {
+            @include b-box(10, (10/$i), $s-b-gutter);
+        }
+    }
+
+}
+
+// // Portrait tablet
+@media (min-width: 768px) and (max-width: 980px) {
+
+    @for $i from 1 to $block-grid-through {
+        .b-#{$i}, .m-b-#{$i} {
+            @include b-box(10, (10/$i), $m-b-gutter);
+        }
+    }
+
+}
+
+// Landscape tablet or desktop
+@media (min-width: 981px) and (max-width: 1209px) {
+
+    @for $i from 1 to $block-grid-through {
+        .b-#{$i}, .l-b-#{$i} {
+            @include b-box(10, (10/$i), $l-b-gutter);
+        }
+    }
+
+}
+
+// // Large desktop
+@media (min-width: 1210px) {
+
+    @for $i from 1 to $block-grid-through {
+        .b-#{$i}, .xl-b-#{$i} {
+            @include b-box(10, (10/$i), $xl-b-gutter);
+        }
+    }
+
+}

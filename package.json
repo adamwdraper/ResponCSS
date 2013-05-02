@@ -1,0 +1,10 @@
+{
+  "name": "ResponCss",
+  "version": "2.8.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-sass": "~0.3.0",
+    "grunt-contrib-watch": "~0.3.1"
+  }
+}

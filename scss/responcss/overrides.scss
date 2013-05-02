@@ -1,5 +1,5 @@
 // Mobile Devices
-@media (max-width: 767px) {
+@media (max-width: $s-max-width) {
 
     // display override
     .s-show {
@@ -13,7 +13,7 @@
 
  
 // Portrait tablet
-@media (min-width: 768px) and (max-width: 980px) {
+@media (min-width: $m-min-width) and (max-width: $m-max-width) {
 
     // display override
     .m-show {
@@ -26,7 +26,7 @@
 }
  
 // Landscape tablet or desktop
-@media (min-width: 981px) and (max-width: 1209px) {
+@media (min-width: $l-min-width) and (max-width: $l-max-width) {
 
     // display override
     .l-show {
@@ -39,7 +39,7 @@
 }
  
 // Large desktop
-@media (min-width: 1210px) {
+@media (min-width: $xl-min-width) {
 
     // display override
     .xl-show {

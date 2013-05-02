@@ -1,5 +1,5 @@
 /*!
- * ResponCSS v2.8 - Responsive fluid CSS layout framework
+ * ResponCSS 2.8.0 - Responsive fluid CSS layout framework
  *
  * (c) 2012, Adam Draper - https://github.com/adamwdraper
  *
@@ -19,11 +19,11 @@
 // ResponCSS Containers
 @import "containers";
 
-// // ResponCSS Overs
+// ResponCSS Overs
 @import "overs";
 
 // ResponCSS Block Grids
 @import "block-grids";
 
-// // ResponCSS Visibility Override classes
+// ResponCSS Visibility Override classes
 @import "overrides"; // Has to be last to override when necessary

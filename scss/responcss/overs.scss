@@ -1,5 +1,5 @@
 // Mobile Devices
-@media (max-width: 767px) {
+@media (max-width: $s-max-width) {
 
     // Universal Sizes (.over-qtr etc.)
     @for $i from 1 through length($fractions) {
@@ -32,7 +32,7 @@
 
 
 // Portrait tablet
-@media (min-width: 768px) and (max-width: 980px) {
+@media (min-width: $m-min-width) and (max-width: $m-max-width) {
 
     // Universal Sizes (.over-qtr etc.)
     @for $i from 1 through length($fractions) {
@@ -65,7 +65,7 @@
 
 
 // Landscape tablet or desktop
-@media (min-width: 981px) and (max-width: 1209px) {
+@media (min-width: $l-min-width) and (max-width: $l-max-width) {
 
     // Universal Sizes (.over-qtr etc.)
     @for $i from 1 through length($fractions) {
@@ -96,8 +96,8 @@
 
 }
 
-// // Large desktop
-@media (min-width: 1210px) {
+// Large desktop
+@media (min-width: $xl-min-width) {
 
     // Universal Sizes (.over-qtr, etc.)
     @for $i from 1 through length($fractions) {

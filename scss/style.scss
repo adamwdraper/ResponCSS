@@ -1,7 +1,7 @@
 // This is a convenient boilerplate less file for starting a project with ResponCSS
 
 // ResponCSS
-@import "responcss/responcss.less";
+@import "responcss/responcss.scss";
 
 /*!
  * 
@@ -22,21 +22,21 @@ html, body {
 }
 
 // Smartphone and Tablet Devices
-@media (max-width: @s-max-width) {
+@media (max-width: $s-max-width) {
 
 }
  
 // Portrait tablet
-@media (min-width: @m-min-width) {
+@media (min-width: $m-min-width) {
 
 }
  
 // Landscape tablet or desktop
-@media (min-width: @l-min-width) {
+@media (min-width: $l-min-width) {
 
 }
  
 // Large desktop
-@media (min-width: @xl-min-width) {
+@media (min-width: $xl-min-width) {
 
 }

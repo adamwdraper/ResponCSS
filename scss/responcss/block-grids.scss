@@ -1,13 +1,13 @@
 // Mobile Devices
 @media (max-width: $s-max-width) {
 
-    @for $i from 1 to $block-grid-through {
+    @for $i from 1 to ($block-grid-through + 1) {
         .b-#{$i} {
             @include b-box(10, (10/$i), $s-b-gutter);
         }
     }
 
-    @for $i from 1 to $block-grid-through {
+    @for $i from 1 to ($block-grid-through + 1) {
         .s-b-#{$i} {
             @include b-box(10, (10/$i), $s-b-gutter);
         }
@@ -17,13 +17,13 @@
 // // Portrait tablet
 @media (min-width: $m-min-width) and (max-width: $m-max-width) {
 
-    @for $i from 1 to $block-grid-through {
+    @for $i from 1 to ($block-grid-through + 1) {
         .b-#{$i} {
             @include b-box(10, (10/$i), $m-b-gutter);
         }
     }
 
-    @for $i from 1 to $block-grid-through {
+    @for $i from 1 to ($block-grid-through + 1) {
         .m-b-#{$i} {
             @include b-box(10, (10/$i), $m-b-gutter);
         }
@@ -34,13 +34,13 @@
 // Landscape tablet or desktop
 @media (min-width: $l-min-width) and (max-width: $l-max-width) {
 
-    @for $i from 1 to $block-grid-through {
+    @for $i from 1 to ($block-grid-through + 1) {
         .b-#{$i} {
             @include b-box(10, (10/$i), $l-b-gutter);
         }
     }
 
-    @for $i from 1 to $block-grid-through {
+    @for $i from 1 to ($block-grid-through + 1) {
         .l-b-#{$i} {
             @include b-box(10, (10/$i), $l-b-gutter);
         }
@@ -51,13 +51,13 @@
 // // Large desktop
 @media (min-width: $xl-min-width) {
 
-    @for $i from 1 to $block-grid-through {
+    @for $i from 1 to ($block-grid-through + 1) {
         .b-#{$i} {
             @include b-box(10, (10/$i), $xl-b-gutter);
         }
     }
 
-    @for $i from 1 to $block-grid-through {
+    @for $i from 1 to ($block-grid-through + 1) {
         .xl-b-#{$i} {
             @include b-box(10, (10/$i), $xl-b-gutter);
         }

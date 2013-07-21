@@ -119,9 +119,9 @@
         }
     }
 
-    // Small Sizes (Overides universals) (.l-over-1, .l-over-2, etc.)
+    // Small Sizes (Overides universals) (.xl-over-1, .xl-over-2, etc.)
     @for $i from 1 through ($xl-columns - 1) {
-        .l-over-#{$i} {
+        .xl-over-#{$i} {
             @include box-over($xl-columns, $i, $xl-gutter);
         }
     }
